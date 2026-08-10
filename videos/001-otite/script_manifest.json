@@ -19,7 +19,7 @@
     {
       "n": 1,
       "arc_role": "hook",
-      "vo_line": "Huit enfants sur dix font une otite. Et non, la piscine n'y est pour rien : le vrai coupable se cache au fond de ton oreille, juste derrière le tympan.",
+      "vo_line": "Huit enfants sur dix font une otite. Et non, la piscine n'y est pour rien : le vrai coupable se cache juste derrière ton tympan.",
       "location": "piscine",
       "through_line_state": "teasee : le badge diagramme de la trompe surgit pres de l'oreille du personnage et revele ou se cache le coupable",
       "shots": [
@@ -34,7 +34,7 @@
     {
       "n": 2,
       "arc_role": "build",
-      "vo_line": "Ton oreille abrite une petite pièce reliée à ta gorge par un tunnel minuscule : la trompe d'Eustache. Sa mission : aérer cette cavité et évacuer les liquides en continu.",
+      "vo_line": "Ton oreille abrite une petite pièce reliée à ta gorge par un tunnel : la trompe d'Eustache. Sa mission : aérer la cavité et évacuer les liquides.",
       "location": "oreille_interne",
       "through_line_state": "ouverte et saine : le tube s'illumine, l'air circule vers la cavite et les liquides glissent vers la gorge",
       "shots": [
@@ -49,7 +49,7 @@
     {
       "n": 3,
       "arc_role": "turn",
-      "vo_line": "Attrape un rhume, et ce tunnel gonfle puis se bouche : du liquide s'accumule derrière le tympan. Les bactéries adorent cette piscine tiède : elles s'y multiplient, et voilà l'otite.",
+      "vo_line": "Attrape un rhume : ce tunnel gonfle et se bouche, le liquide reste coincé à l'intérieur. Les bactéries adorent cette piscine tiède, s'y multiplient : voilà l'otite.",
       "location": "oreille_interne",
       "through_line_state": "bouchee : les parois gonflent et se ferment, le liquide s'accumule dans la cavite et les bacteries s'y multiplient",
       "shots": [

@@ -41,8 +41,25 @@
     "4": "d94d0522-7679-4e3b-bacd-b9e6c8b3d2a5"
   },
   "declined_preset_id": "5a77643c-b6cc-4efd-bdc6-ab8ff48dfa82",
-  "voice_jobs": {},
-  "music_bed_job": null,
+  "voice_jobs": {
+    "1": {"job_id": "372c7482-feba-4544-ace2-316723b3ee0b", "speech_s": 9.0, "wps": 2.78, "attempt": 2},
+    "2": {"job_id": "66521828-3eee-4c2b-a4ca-e3ab4a769a5f", "speech_s": 9.0, "wps": 3.0, "attempt": 2},
+    "3": {"job_id": "c12bbd04-9d03-4f81-9453-9658534493ab", "speech_s": 8.935, "wps": 3.02, "attempt": 2},
+    "4": {"job_id": "56ec01a5-ef0d-4154-8197-3ef28e7f1d8e", "speech_s": 9.0, "wps": 3.11, "attempt": 1},
+    "_attempts_v1_rejetees": "lignes 1-3 v1 rejetées (RUSHED 3.34-3.73 wps, L1 sous plancher 8.04s) — réécrites plus courtes puis régénérées, L4 passée du premier coup"
+  },
+  "music_bed_job": {"job_id": "d0182b7a-128b-490c-ab5a-96c659f407be", "model": "sonilo_music", "duration_s": 40.03},
+  "delivery": {
+    "final_1080_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_113842_f31ff67a-95af-411b-b70d-7eca60e602ef.mp4",
+    "upscale_job_id": "f31ff67a-95af-411b-b70d-7eca60e602ef",
+    "upscaled": "topaz-1080p",
+    "master_720_media_id": "bbc23708-e9bf-4975-968d-e13d85075c73",
+    "master_720_url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/bbc23708-e9bf-4975-968d-e13d85075c73.mp4",
+    "poster_1080_media_id": "fe68b739-d22a-4f6d-9090-771af94c8f6c",
+    "poster_1080_url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/fe68b739-d22a-4f6d-9090-771af94c8f6c.jpg",
+    "poster_720_media_id": "fd82b566-86f0-496b-89ba-d386279b50ec",
+    "receipts": "video 40.041667s / audio 40.055000s · sidecar blocks=4 per_block=4 · srt 28 cues · validate_result_manifests valid:true"
+  },
   "notes": [
     "Sandbox Higgsfield télécharge les result_urls CloudFront sans problème (HTTP 200) — l'ancien blocage ne concernait que les URLs présignées.",
     "Le proxy réseau LOCAL de la session CCR bloque ce CDN (CONNECT 403) — tout passe par le sandbox.",

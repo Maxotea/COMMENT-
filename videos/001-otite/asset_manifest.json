@@ -1,0 +1,11 @@
+{"assets":[
+{"name":"style_key","kind":"style_key","url":"https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104429_6f332671-7f68-40bd-abd1-e7bf6cba2656.png","job_id":"6f332671-7f68-40bd-abd1-e7bf6cba2656"},
+{"name":"char_main","kind":"character","url":"https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104742_9decbeed-3925-4730-99bd-bfbd2add6a5b.png","job_id":"9decbeed-3925-4730-99bd-bfbd2add6a5b"},
+{"name":"char_bacteria","kind":"character","url":"https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104742_b8e37f6b-58bc-49f1-8f0c-fc206f7a89af.png","job_id":"b8e37f6b-58bc-49f1-8f0c-fc206f7a89af"},
+{"name":"loc_pool","kind":"location","url":"https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104742_0df94c94-e8d1-4265-99f7-e69acf96ecd3.png","job_id":"0df94c94-e8d1-4265-99f7-e69acf96ecd3"},
+{"name":"loc_ear","kind":"location","url":"https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104742_bd3dce53-0bd1-4740-8c7b-09981ce12746.png","job_id":"bd3dce53-0bd1-4740-8c7b-09981ce12746"},
+{"name":"loc_ear_macro","kind":"location","url":"https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_105146_a27e86d9-cc45-4877-87aa-15697304ec7f.png","job_id":"a27e86d9-cc45-4877-87aa-15697304ec7f"},
+{"name":"loc_diagram","kind":"location","url":"https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104845_657f6aee-6a5f-4597-b884-723c129eadc2.png","job_id":"657f6aee-6a5f-4597-b884-723c129eadc2"},
+{"name":"prop_tube","kind":"prop","url":"https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104742_c5c1011a-28b2-460b-b7ea-cab609ffaeb9.png","job_id":"c5c1011a-28b2-460b-b7ea-cab609ffaeb9"},
+{"name":"prop_tissue","kind":"prop","url":"https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_105023_27e22174-f92b-44db-9c83-8c6041e3f25d.png","job_id":"27e22174-f92b-44db-9c83-8c6041e3f25d"}
+]}

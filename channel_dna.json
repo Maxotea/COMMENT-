@@ -1,0 +1,36 @@
+{
+  "_comment": "CHANNEL DNA — à redonner à Claude pour la vidéo #2+ : il saute l'intake et la phase de style, réutilise la clé de style, la paire de voix et les assets nommés, et ne change que le sujet.",
+  "channel_type": "explainer",
+  "motion_mode": "animated",
+  "talking_characters": false,
+  "style": {
+    "name": "Pastel Flat 2D",
+    "preset_id": "d0708b4f-a134-40f7-9884-9ad830904e71",
+    "style_key_job_id": "6f332671-7f68-40bd-abd1-e7bf6cba2656",
+    "style_key_urls": ["https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104429_6f332671-7f68-40bd-abd1-e7bf6cba2656.png"],
+    "formula_file": "references/kids-styles.md §2 Pastel Flat 2D",
+    "palette_lock": "pastel palette of the reference images (pink / baby blue / mint / sandy yellow / lavender) — no new colors, outlines darker-shade never black",
+    "motion": "simple limited animation on twos, soft bouncy easing; KEEP '3D render' in NEGATIVE",
+    "music_bed": "style-inherent (catalogue Kids) : bed instrumental sonilo_music à la durée exacte de la vidéo, mood playful-light adapté au ton du channel"
+  },
+  "voice": {
+    "voice_id": "731b4ffe-e95e-59f4-8c00-81608936091f",
+    "voice_type": "preset",
+    "name": "Ainsley",
+    "delivery": "casual conversational French explainer, warm bright timbre, playful deadpan wit, lively pace",
+    "pace_note": "voix rapide en français : viser ~25-28 tokens par ligne de 10s (2.8-3.1 mots/s mesurés), pas la bande nominale 27-32"
+  },
+  "aspect": "9:16",
+  "subtitles": "on — look clean, --language fr",
+  "language": "fr",
+  "assets": [
+    {"name": "char_main", "kind": "character", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104742_9decbeed-3925-4730-99bd-bfbd2add6a5b.png"},
+    {"name": "char_bacteria", "kind": "character", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104742_b8e37f6b-58bc-49f1-8f0c-fc206f7a89af.png"},
+    {"name": "loc_pool", "kind": "location", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104742_0df94c94-e8d1-4265-99f7-e69acf96ecd3.png"},
+    {"name": "loc_ear", "kind": "location", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104742_bd3dce53-0bd1-4740-8c7b-09981ce12746.png"},
+    {"name": "loc_ear_macro", "kind": "location", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_105146_a27e86d9-cc45-4877-87aa-15697304ec7f.png"},
+    {"name": "loc_diagram", "kind": "location", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104845_657f6aee-6a5f-4597-b884-723c129eadc2.png"},
+    {"name": "prop_tube", "kind": "prop", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104742_c5c1011a-28b2-460b-b7ea-cab609ffaeb9.png"},
+    {"name": "prop_tissue", "kind": "prop", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_105023_27e22174-f92b-44db-9c83-8c6041e3f25d.png"}
+  ]
+}
