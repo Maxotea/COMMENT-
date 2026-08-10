@@ -1,0 +1,84 @@
+{
+  "topic": "Comment on attrape une otite",
+  "channel_type": "explainer",
+  "style": "Pastel Flat 2D",
+  "language": "fr",
+  "through_line": {
+    "name": "la trompe d'Eustache",
+    "asset": "prop_tube",
+    "progression": "teasee en bloc un (le badge diagramme surgit pres de l'oreille) -> ouverte et fonctionnelle en bloc deux (l'air circule, les liquides s'ecoulent) -> gonflee, bouchee et envahie de bacteries en bloc trois -> comparee en bloc quatre (courte et horizontale chez l'enfant contre longue et inclinee chez l'adulte)",
+    "resolution": "le bloc final resout le mystere du hook : la geometrie du tube explique pourquoi les enfants sont touches, et le badge comparatif referme la question ouverte au bloc un"
+  },
+  "arc": {
+    "hook": 1,
+    "build": [2],
+    "turn": 3,
+    "payoff": 4
+  },
+  "blocks": [
+    {
+      "n": 1,
+      "arc_role": "hook",
+      "vo_line": "Huit enfants sur dix font une otite. Et non, la piscine n'y est pour rien : le vrai coupable se cache au fond de ton oreille, juste derrière le tympan.",
+      "location": "piscine",
+      "through_line_state": "teasee : le badge diagramme de la trompe surgit pres de l'oreille du personnage et revele ou se cache le coupable",
+      "shots": [
+        "WIDE static establishing: the pastel pool; ten soft pink inflatable rings bob on the water in two rows, then eight of them flip belly-up one after another, each landing with a little splash",
+        "MEDIUM low angle: the young person stands at the pool edge mid-shrug, droplets dripping; a big pastel lavender X snaps into place over the pool behind them",
+        "CLOSE-UP: the young person tilts their head sideways and cups a hand to their ear; tiny water droplets shake out and scatter with soft plips",
+        "EXTREME CLOSE-UP slow push-in: the side of their ear; the ear canal opening glows softly from inside, pulsing twice",
+        "MEDIUM: the rounded ear-diagram badge swings in from the right and settles beside the young person's head with a bounce; their eyes go wide"
+      ],
+      "assets_used": ["loc_pool", "char_main", "prop_tube"]
+    },
+    {
+      "n": 2,
+      "arc_role": "build",
+      "vo_line": "Ton oreille abrite une petite pièce reliée à ta gorge par un tunnel minuscule : la trompe d'Eustache. Sa mission : aérer cette cavité et évacuer les liquides en continu.",
+      "location": "oreille_interne",
+      "through_line_state": "ouverte et saine : le tube s'illumine, l'air circule vers la cavite et les liquides glissent vers la gorge",
+      "shots": [
+        "WIDE static establishing: the middle-ear chamber; the pale eardrum membrane shivers gently, then the slim mint tube lights up section by section down toward the throat opening",
+        "MEDIUM lateral with a gentle drift right: baby blue air sparkles stream up the tube one after another and pop softly against the membrane",
+        "CLOSE-UP high angle: the tube entrance at the cavity floor; a single droplet rolls in, then slides away down the slope and plops out of sight",
+        "EXTREME CLOSE-UP slow push-in: the membrane surface flexes in and out like a calm breath as two sparkles arrive and burst",
+        "MEDIUM low angle down the tube's length: three droplets queue at the top, then whoosh away one after another toward the throat opening"
+      ],
+      "assets_used": ["loc_ear", "prop_tube"]
+    },
+    {
+      "n": 3,
+      "arc_role": "turn",
+      "vo_line": "Attrape un rhume, et ce tunnel gonfle puis se bouche : du liquide s'accumule derrière le tympan. Les bactéries adorent cette piscine tiède : elles s'y multiplient, et voilà l'otite.",
+      "location": "oreille_interne",
+      "through_line_state": "bouchee : les parois gonflent et se ferment, le liquide s'accumule dans la cavite et les bacteries s'y multiplient",
+      "shots": [
+        "CLOSE-UP static: the pink tissue box pops in beside the tube entrance and one tissue whips out; the tube's walls puff up and squeeze shut with a squelch",
+        "MEDIUM high angle with a slow tilt down: baby blue liquid rises step by step behind the membrane, flooding the cavity floor",
+        "EXTREME CLOSE-UP: the liquid surface; three round germ blobs surface one after another - pink, then mint, then lavender - the last one popping up with a splash",
+        "MEDIUM: the germ blobs each clap their stubby arms and split into two, then those split again, crowding the warm pool shoulder to shoulder",
+        "CLOSE-UP low angle from inside: the membrane now bulges outward slightly, blob silhouettes pressed against it as it throbs twice"
+      ],
+      "assets_used": ["loc_ear_macro", "char_bacteria", "prop_tube", "prop_tissue"]
+    },
+    {
+      "n": 4,
+      "arc_role": "payoff",
+      "vo_line": "Mais pourquoi surtout les enfants ? Leur trompe est plus courte et presque horizontale, alors le liquide stagne au chaud — abonne-toi, demain on t'explique pourquoi tu as le hoquet.",
+      "location": "coin_etude",
+      "through_line_state": "comparee et resolue : trompe courte et horizontale a gauche ou tout stagne, longue et inclinee a droite ou tout s'ecoule — le mystere du hook est paye",
+      "shots": [
+        "WIDE static establishing: the pastel study corner; the rounded comparison board swings up and stamps into place on its stand",
+        "EXTREME CLOSE-UP straight on the left panel: the short almost-horizontal tube; a droplet enters and just sits there, wobbling in place without draining",
+        "CLOSE-UP lateral on the right panel: the long steeply slanted tube; a droplet zips down its slope and out with a whoosh",
+        "MEDIUM: the young person slides in beside the board, taps the short tube twice with one finger, then nods knowingly to camera",
+        "CLOSE-UP low angle: the young person points at the viewer, a rounded bell shape pops in beside them and rings with two sparkles, and they wink"
+      ],
+      "assets_used": ["loc_diagram", "char_main", "prop_tube"]
+    }
+  ],
+  "sources": [
+    "https://www.nidcd.nih.gov/health/ear-infections-children",
+    "https://www.ameli.fr/assure/sante/themes/otite-moyenne-aigue-enfant"
+  ]
+}

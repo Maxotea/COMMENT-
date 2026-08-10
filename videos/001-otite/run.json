@@ -1,0 +1,52 @@
+{
+  "video": "001 — Comment on attrape une otite",
+  "date": "2026-08-10",
+  "workflow": "faceless-channel-video v2.1",
+  "intake_lock": "Type: Explainer [projet] · Mode: animé [projet] · Style: Pastel Flat 2D [choisi, resolveur] · 40s → 4 blocs [validé] · 9:16 [validé] · Sous-titres: clean [validé] · Voix: Ainsley [choisie] · Sujet: comment on attrape une otite [idée du user]",
+  "style": {
+    "name": "Pastel Flat 2D",
+    "preset_id": "d0708b4f-a134-40f7-9884-9ad830904e71",
+    "card_media_id": "2f9388b1-1bf4-4160-9b79-6d9a541da331",
+    "canonical_ref_media_ids": [
+      "7151be12-3134-4058-a03f-dc5b01c0f215",
+      "e215b16a-b0b3-406f-8752-c6645cfdb2ba",
+      "6fb202f2-ff26-418e-8861-450714d12377"
+    ],
+    "style_key_job_id": "6f332671-7f68-40bd-abd1-e7bf6cba2656",
+    "formula_file": "references/kids-styles.md §2 Pastel Flat 2D",
+    "palette_lock": "pastel palette of the reference images (pink / baby blue / mint / sandy yellow / lavender) — no new colors, outlines darker-shade never black",
+    "music_bed": "style-inherent (catalogue Kids) — sonilo_music 40s, --music-vol 0.05, mood playful-light adapté au ton Explainer"
+  },
+  "voice": {
+    "name": "Ainsley",
+    "voice_id": "731b4ffe-e95e-59f4-8c00-81608936091f",
+    "voice_type": "preset",
+    "voice_lock_line": "731b4ffe-e95e-59f4-8c00-81608936091f preset"
+  },
+  "assets": {
+    "char_main": {"job_id": "9decbeed-3925-4730-99bd-bfbd2add6a5b", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104742_9decbeed-3925-4730-99bd-bfbd2add6a5b.png"},
+    "char_bacteria": {"job_id": "b8e37f6b-58bc-49f1-8f0c-fc206f7a89af", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104742_b8e37f6b-58bc-49f1-8f0c-fc206f7a89af.png"},
+    "loc_pool": {"job_id": "0df94c94-e8d1-4265-99f7-e69acf96ecd3", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104742_0df94c94-e8d1-4265-99f7-e69acf96ecd3.png"},
+    "loc_ear": {"job_id": "bd3dce53-0bd1-4740-8c7b-09981ce12746", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104742_bd3dce53-0bd1-4740-8c7b-09981ce12746.png"},
+    "loc_ear_macro": {"job_id": "a27e86d9-cc45-4877-87aa-15697304ec7f", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_105146_a27e86d9-cc45-4877-87aa-15697304ec7f.png"},
+    "loc_diagram": {"job_id": "657f6aee-6a5f-4597-b884-723c129eadc2", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104845_657f6aee-6a5f-4597-b884-723c129eadc2.png"},
+    "prop_tube": {"job_id": "c5c1011a-28b2-460b-b7ea-cab609ffaeb9", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104742_c5c1011a-28b2-460b-b7ea-cab609ffaeb9.png"},
+    "prop_tissue": {"job_id": "27e22174-f92b-44db-9c83-8c6041e3f25d", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_105023_27e22174-f92b-44db-9c83-8c6041e3f25d.png"}
+  },
+  "validator": {"validate_motion_script": {"valid": true, "expected_block_count": 4, "block_count": 4, "errors": [], "invalid_blocks": []}},
+  "blocks_jobs": {
+    "1": "ee7f8bbd-a04e-423d-b930-570f819c966d",
+    "2": "9cdb738c-c019-4b43-86de-0b2cc92d6a13",
+    "3": "276dafc9-bc8e-4103-acba-0278d6a21622",
+    "4": "d94d0522-7679-4e3b-bacd-b9e6c8b3d2a5"
+  },
+  "declined_preset_id": "5a77643c-b6cc-4efd-bdc6-ab8ff48dfa82",
+  "voice_jobs": {},
+  "music_bed_job": null,
+  "notes": [
+    "Sandbox Higgsfield télécharge les result_urls CloudFront sans problème (HTTP 200) — l'ancien blocage ne concernait que les URLs présignées.",
+    "Le proxy réseau LOCAL de la session CCR bloque ce CDN (CONNECT 403) — tout passe par le sandbox.",
+    "ImageMagick (montage) segfault dans le sandbox — utiliser ffmpeg xstack pour les grilles.",
+    "Recommandeur de preset : les 4 blocs ont été interceptés par le preset 3D RENDER — resoumis avec declined_preset_id, tous acceptés."
+  ]
+}
