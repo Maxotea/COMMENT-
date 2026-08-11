@@ -1,0 +1,80 @@
+{
+  "topic": "Pourquoi tu as le hoquet",
+  "channel_type": "explainer",
+  "style": "Pastel Flat 2D",
+  "language": "fr",
+  "through_line": {
+    "name": "le diaphragme",
+    "asset": "prop_diaphragm",
+    "progression": "presente calme en bloc un (trampoline qui respire sous les poumons) -> irrite et spasme en bloc deux (contraction d'un coup sec, aspiration brusque) -> consequence en bloc trois (l'air claque contre la glotte qui se ferme : le hic) -> origine en bloc quatre (le reflexe s'entrainait deja dans le ventre maternel)",
+    "resolution": "le bloc final explique d'ou vient ce reflexe absurde : un entrainement respiratoire d'avant la naissance — la boucle du hook (soixante-huit ans de hoquet) se referme sur un reflexe plus vieux que ta premiere respiration"
+  },
+  "arc": { "hook": 1, "build": [2], "turn": 3, "payoff": 4 },
+  "blocks": [
+    {
+      "n": 1,
+      "arc_role": "hook",
+      "vo_line": "Un homme a eu le hoquet soixante-huit ans. Pour comprendre, direction ton diaphragme : le grand muscle en dôme, tendu comme un trampoline juste sous tes poumons.",
+      "location": "torse_interieur",
+      "through_line_state": "presente et calme : le dome-trampoline rebondit doucement au rythme de la respiration",
+      "shots": [
+        "WIDE static establishing: the chest cavern; the sandy dome muscle bounces gently like a trampoline while the two balloon-lungs inflate and deflate in a calm rhythm",
+        "MEDIUM low angle: the young person slides in at the side with a hand on their belly; a sudden hic-bounce jolts their shoulders up",
+        "CLOSE-UP: the young person hiccups again — cheeks puff, eyes blink wide, a small startled hop",
+        "EXTREME CLOSE-UP slow push-in: the taut dome muscle surface, quivering slightly with tiny ripples",
+        "MEDIUM: the rounded lungs-and-dome badge swings in and settles beside the dome with a bounce, two sparkles popping around it"
+      ],
+      "assets_used": ["loc_torso", "char_main", "prop_diaphragm"]
+    },
+    {
+      "n": 2,
+      "arc_role": "build",
+      "vo_line": "Avale trop vite ou bois un soda glacé : le muscle s'agace et se contracte d'un coup sec en aspirant l'air brusquement vers tes poumons.",
+      "location": "torse_interieur",
+      "through_line_state": "irrite : le dome fremit, puis claque vers le bas d'un coup sec — le spasme aspire l'air d'un trait",
+      "shots": [
+        "CLOSE-UP static: the mint soda glass pops in beside the windpipe and fizzy bubbles race up and pop one after another",
+        "MEDIUM high angle with a slow tilt down: three round air-gulps tumble down the windpipe into the chest one after another",
+        "EXTREME CLOSE-UP: the dome muscle's edge twitches as tiny irritation sparkles crackle along it",
+        "MEDIUM static: the dome SNAPS downward flat with a deep jolt and both balloon-lungs suddenly balloon wide",
+        "CLOSE-UP low angle: the stretched lungs wobble back with a squeak, air sparkles swirling inside"
+      ],
+      "assets_used": ["loc_torso_macro", "prop_diaphragm", "prop_soda"]
+    },
+    {
+      "n": 3,
+      "arc_role": "turn",
+      "vo_line": "Sauf que là-haut, ta glotte panique et claque la porte en une fraction de seconde. L'air freiné pile dessus fait vibrer tes cordes vocales : hic.",
+      "location": "gorge",
+      "through_line_state": "consequence du spasme : l'air aspire par le dome fonce vers le haut et s'ecrase contre la glotte fermee",
+      "shots": [
+        "WIDE static establishing: the throat tube; the two mint glottis doors stand slightly open at the top, gentle air sparkles drifting through",
+        "MEDIUM: a rush of round air-blobs races up the tube toward the doors, one after another, faster and faster",
+        "CLOSE-UP: the two doors SLAM shut with a sharp clap; the leading air-blob squashes flat against them",
+        "EXTREME CLOSE-UP slow push-in: the two taut cords on the closed doors quiver rapidly with tight vibration lines",
+        "MEDIUM low angle: one air-blob tumbles back down, deflated, as the doors ease slightly ajar and settle"
+      ],
+      "assets_used": ["loc_throat", "prop_diaphragm"]
+    },
+    {
+      "n": 4,
+      "arc_role": "payoff",
+      "vo_line": "Ce réflexe étrange date du ventre de ta mère : les bébés hoquettent avant même de respirer — abonne-toi, demain on passe aux fameux bâillements contagieux.",
+      "location": "poche_ronde",
+      "through_line_state": "origine revelee : le meme spasme du dome s'entrainait deja avant la naissance — la boucle du hook se referme",
+      "shots": [
+        "WIDE static establishing: the soft round pocket; the small curled silhouette floats gently, bobbing in the pale liquid",
+        "CLOSE-UP: the silhouette's tiny chest gives a soft hic-bounce and a stream of little bubbles rises",
+        "EXTREME CLOSE-UP: the bubbles pop against the pocket wall one by one with soft rings",
+        "MEDIUM: the young person slides in beside the pocket scene, points at it, then taps their own chest twice and nods to camera",
+        "CLOSE-UP low angle: the young person points at the viewer, the rounded sandy bell pops in and rings with two sparkles, and they wink"
+      ],
+      "assets_used": ["loc_womb", "char_main", "prop_diaphragm"]
+    }
+  ],
+  "sources": [
+    "https://my.clevelandclinic.org/health/diseases/17672-hiccups",
+    "https://www.mayoclinic.org/diseases-conditions/hiccups/symptoms-causes/syc-20352613",
+    "https://www.guinnessworldrecords.com/world-records/longest-attack-of-hiccups"
+  ]
+}

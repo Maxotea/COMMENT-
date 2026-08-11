@@ -1,0 +1,44 @@
+{
+  "video": "002 — Pourquoi tu as le hoquet",
+  "date": "2026-08-11",
+  "workflow": "faceless-channel-video v2.1 (reprise CHANNEL DNA — intake et phase de style sautés)",
+  "intake_lock": "Type: Explainer [DNA] · Mode: animé [DNA] · Style: Pastel Flat 2D [DNA, clé réutilisée] · 40s → 4 blocs [format chaîne] · 9:16 [DNA] · Sous-titres: clean FR [DNA] · Voix: Ainsley [DNA] · Sujet: pourquoi tu as le hoquet [CTA de la vidéo 1]",
+  "style_key_job_id": "6f332671-7f68-40bd-abd1-e7bf6cba2656",
+  "assets": {
+    "char_main": {"job_id": "9decbeed-3925-4730-99bd-bfbd2add6a5b", "note": "réutilisé de la vidéo 001"},
+    "loc_torso": {"job_id": "d9c755f7-c669-4a6f-9167-cdf67f601687", "note": "2 faux positifs nsfw, obtenu au 3e essai après reformulation (chest→breathing system)"},
+    "loc_torso_macro": {"job_id": "fa3ec532-d99e-470e-99f3-a1fa335b3fe2", "note": "2 faux positifs nsfw, obtenu au 3e essai (dome muscle→trampoline surface)"},
+    "loc_throat": {"job_id": "176d4aad-2140-461e-99a7-71465f527129"},
+    "loc_womb": {"job_id": "c20d5dcf-a359-4af1-9e86-8017734e117d"},
+    "prop_diaphragm": {"job_id": "ff1521a8-1c18-4995-8216-37cea9ef1f90"},
+    "prop_soda": {"job_id": "2c883982-e27c-4961-93b3-000f29aa37c2"}
+  },
+  "blocks_jobs": {
+    "1": "0bd8f21b-ccc2-4c47-ab49-7aa9d0c84f0c",
+    "2": "4a010b10-b1fa-4f7e-b010-0aecdb45a998",
+    "3": "b434d427-b840-4ac6-a291-a58631a82be8",
+    "4": "cd3500d8-1729-42e6-b9fc-94db75e71d39"
+  },
+  "voice_jobs": {
+    "1": {"job_id": "432381b9-e9e8-4287-8075-2d36991e57cf", "speech_s": 8.98, "wps": 3.01, "attempt": 1},
+    "2": {"job_id": "669c80f5-f8b6-4162-abcd-5c3635baa221", "speech_s": 8.945, "wps": 2.68, "attempt": 2},
+    "3": {"job_id": "1a31bcdc-3c51-46f8-9c54-1c94a0c4d516", "speech_s": 9.0, "wps": 2.89, "attempt": 1},
+    "4": {"job_id": "8b91a1df-f2c1-431d-b278-33c21be59753", "speech_s": 9.0, "wps": 3.33, "attempt": 3, "note": "marquée RUSHED par le compteur — artefact tokenizer sur accents/élisions FR (compte 30 tokens pour 24 mots réels, débit réel ≈2.8 mots/s) ; 3 essais faits (3.45→3.37→3.33), meilleure prise conservée conformément au budget narrateur (~3 essais/ligne puis on garde la plus proche en le signalant)"}
+  },
+  "music_bed_job": {"job_id": "4e570c1d-9ae7-46d2-88e5-1cf69adc3124", "model": "sonilo_music", "duration_s": 40.03},
+  "validators": {
+    "validate_motion_script": {"valid": true, "note": "bande recalibrée --words-min 24 --words-max 31 (pace Ainsley FR)"},
+    "gate4": "durées 10.006s ×4, 720×1280, 24fps ; cuts détectés 9/3/3/4 à scene>0.15 — blocs 2-3 vérifiés visuellement (5 plans distincts présents, sous-comptage attendu sur look flat)"
+  },
+  "delivery": {
+    "master_720_media_id": "44e80a2a-c3d0-45ba-8173-5f3afff206e6",
+    "master_720_url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/44e80a2a-c3d0-45ba-8173-5f3afff206e6.mp4",
+    "poster_720_media_id": "079b79f8-dfea-4363-8a5a-37d69fbc4dc7",
+    "upscale_job_id": "3b07f079-4c24-4a1a-b26c-c8ecbb0269da",
+    "upscaled": "topaz-1080p",
+    "final_1080_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260811_084252_3b07f079-4c24-4a1a-b26c-c8ecbb0269da.mp4",
+    "poster_1080_media_id": "daa062b0-d837-4137-abfb-fadbd8fd29d1",
+    "poster_1080_url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/daa062b0-d837-4137-abfb-fadbd8fd29d1.jpg",
+    "receipts": "video 40.041667s / audio 40.055000s · 1080p: video 40.042s / audio 40.064s · sidecar blocks=4 per_block=4 · srt 25 cues · PUT 200 ×2 · QC frame t=23.5s vérifiée (glotte + sous-titre synchrone)"
+  }
+}
