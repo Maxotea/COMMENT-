@@ -1,0 +1,54 @@
+{
+  "video": "003 — Pourquoi les bâillements sont contagieux",
+  "date": "2026-08-11",
+  "workflow": "faceless-channel-video v2.1 (reprise CHANNEL DNA)",
+  "intake_lock": "Type: Explainer [DNA] · Mode: animé [DNA] · Style: Pastel Flat 2D [DNA, clé réutilisée] · 40s → 4 blocs · 9:16 [DNA] · Sous-titres: clean FR [DNA] · Voix: Ainsley [DNA] · Sujet: bâillements contagieux [CTA de la vidéo 2]",
+  "style_key_job_id": "6f332671-7f68-40bd-abd1-e7bf6cba2656",
+  "assets": {
+    "char_main": {"job_id": "9decbeed-3925-4730-99bd-bfbd2add6a5b", "note": "réutilisé depuis la vidéo 001"},
+    "char_second": {"job_id": "950d2365-5ebb-487a-93bf-ae1a67b15c46", "note": "nouveau — cheveux foncés attachés, pull rose"},
+    "char_dog": {"job_id": "333352f9-fe79-4fe1-98b9-b6a6e7875ae1"},
+    "loc_salon": {"job_id": "9ee9754d-aca5-4030-a2b7-21427386aafd"},
+    "loc_salon_angle": {"job_id": "1806e4af-557f-4340-b8d2-0ffc85896bbb", "note": "angle de couverture — le salon porte 3 blocs, règle ≤2 consécutifs"},
+    "loc_brain": {"job_id": "42867cf2-afe9-446c-b3d1-2efa7cbf5582"},
+    "prop_mirror_neurons": {"job_id": "5afea625-28c9-427e-83eb-f62239fc20e8"}
+  },
+  "blocks_jobs": {
+    "1": "74b87f79-342a-49a5-8a65-df537e31bbd9",
+    "2": "1957d02b-13a1-4d15-a94b-8358091cdf55",
+    "3": "63ec3375-6992-4f14-bc2d-ccf1c50a1e6c",
+    "4": "8734cbfb-fe3c-470c-a16d-3ca416612219"
+  },
+  "voice_jobs": {
+    "1": {"job_id": "5d2c63e1-3097-484c-8954-050b9122a882", "speech_s": 8.95, "wps": 3.13, "attempt": 1, "note": "3 prises testées ; les v2/v3 étaient sous le plancher 8.6s ou plus rapides. Réserve assumée : pause interne 0.87s (seuil 0.80)."},
+    "2": {"job_id": "9836fd23-3716-47c0-8b4e-cfbd6119bf93", "speech_s": 8.87, "wps": 3.04, "attempt": 1},
+    "3": {"job_id": "271bce8b-0bd1-4bff-a302-f0e2625ead66", "speech_s": 9.0, "wps": 3.33, "attempt": 1, "note": "meilleure des 3 prises"},
+    "4": {"job_id": "0e0a7c9e-3dc4-4047-8ca8-f230c058f2b7", "speech_s": 9.0, "wps": 3.0, "attempt": 3, "note": "réécrite pour supprimer les élisions qui cassaient l'alignement des sous-titres"}
+  },
+  "music_bed_job": {"job_id": "9abfd384-9f27-4b11-a235-d5d9ada2587a", "model": "sonilo_music", "duration_s": 40.03},
+  "incident_sous_titres": {
+    "symptome": "3 refus consécutifs du burn : 'block 4: Whisper/script similarity 0.63 below 0.750'",
+    "fausses_pistes_ecartees": "changer de prise (3 essais), passer le modèle Whisper de small à medium (ratio strictement identique : 0.630)",
+    "cause_reelle": "l'aligneur compare les tokens Whisper aux tokens du script ; Whisper découpe les élisions (c'est → 'c'+'est', d'empathie → 'd'+'empathie', abonne-toi → 'abonne'+'toi') alors que le script normalise en mots soudés (cest, dempathie, abonnetoi). 6 apostrophes dans la ligne 4 → ratio 0.62.",
+    "diagnostic": "comparaison directe des deux listes de tokens via difflib.SequenceMatcher, en réutilisant _normalize du script d'alignement",
+    "correctif": "ligne réécrite avec un seul trait d'union (abonne-toi) → burn accepté immédiatement",
+    "regle_ajoutee": "channel_dna.json → regle_sous_titres_fr"
+  },
+  "validators": {
+    "validate_motion_script": {"valid": true, "note": "bande 24-32 (pace Ainsley FR)"},
+    "gate4": "4 blocs 10.006s, 720×1280, 24fps ; cuts 4/3/4/4 à scene>0.15, bloc 1 vérifié visuellement (5 plans distincts)",
+    "gate7": "25 cues, frame de contrôle à 33.5s vérifiée (badge neurones + sous-titre synchrone)",
+    "gate8": "1080×1920, video 40.0417s / audio 40.064s"
+  },
+  "delivery": {
+    "master_720_media_id": "c535f6fe-d9e3-4591-af3d-a76dbbddd3f9",
+    "master_720_url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/c535f6fe-d9e3-4591-af3d-a76dbbddd3f9.mp4",
+    "upscale_job_id": "71967cb6-06cf-41b3-96a3-b70e64aa50e1",
+    "upscaled": "topaz-1080p",
+    "final_1080_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260811_203005_71967cb6-06cf-41b3-96a3-b70e64aa50e1.mp4",
+    "poster_1080_media_id": "f1b2ea85-14aa-421c-8698-d8c448a1ac7d",
+    "poster_1080_url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/f1b2ea85-14aa-421c-8698-d8c448a1ac7d.jpg",
+    "metricool_post_id": 360968512,
+    "publication": "TikTok @ExpliqueMoi — 2026-08-14 12:00 Europe/Paris, autoPublish, vérifié"
+  }
+}

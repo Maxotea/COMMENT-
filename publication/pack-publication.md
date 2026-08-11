@@ -8,6 +8,7 @@
 > |---|---|---|---|---|
 > | Vidéo #1 — otite | 2026-08-12 12:00 | TikTok | 360947537 | PENDING, autoPublish |
 > | Vidéo #2 — hoquet | 2026-08-13 12:00 | TikTok | 360947612 | PENDING, autoPublish |
+> | Vidéo #3 — bâillements | 2026-08-14 12:00 | TikTok | 360968512 | PENDING, autoPublish |
 >
 > Bio, avatar et réglages du compte : `publication/bio-tiktok.md`.
 >
@@ -64,6 +65,22 @@ Payload Metricool vidéo #2 (mêmes règles que la #1) :
   "mediaUrls": ["https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260811_084252_3b07f079-4c24-4a1a-b26c-c8ecbb0269da.mp4"],
   "draft": false, "autoPublish": true
 }
+```
+
+## Vidéo #3 — Pourquoi les bâillements sont contagieux ✅ LIVRÉE
+
+- **Fichier vidéo (1080×1920, 40 s)** :
+  https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260811_203005_71967cb6-06cf-41b3-96a3-b70e64aa50e1.mp4
+- **Cover/poster** :
+  https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/f1b2ea85-14aa-421c-8698-d8c448a1ac7d.jpg
+- **Titre** : `Pourquoi les bâillements sont contagieux 🐶`
+- **Légende** :
+
+```
+Ton chien bâille quand tu bâilles 🐶
+Le coupable : de minuscules neurones qui copient ce qu'ils voient. Et plus tu aimes la personne, plus tu attrapes son bâillement.
+👉 Abonne-toi — demain : les frissons.
+#baillement #corpshumain #cerveau #empathie #lesavaistu #apprendresurtiktok
 ```
 
 ## Règles de chaîne (à reconduire chaque jour)

@@ -20,6 +20,12 @@
     "delivery": "casual conversational French explainer, warm bright timbre, playful deadpan wit, lively pace",
     "pace_note": "voix rapide en français : viser ~25-28 tokens par ligne de 10s (2.8-3.1 mots/s mesurés), pas la bande nominale 27-32"
   },
+  "regle_sous_titres_fr": {
+    "probleme": "L'aligneur de sous-titres compare les mots de Whisper aux mots du script. Whisper coupe les élisions en deux tokens (c'est → 'c' + 'est', d'empathie → 'd' + 'empathie', abonne-toi → 'abonne' + 'toi'), alors que le script les garde soudés après normalisation ('cest', 'dempathie', 'abonnetoi'). Chaque apostrophe ou trait d'union compte donc comme une erreur d'alignement.",
+    "symptome": "'Whisper/script similarity 0.63 is below 0.750; refusing to burn unverified captions' — sur le bloc qui contient le plus d'apostrophes (souvent le CTA final). Changer de modèle Whisper ne corrige RIEN : le ratio reste identique.",
+    "regle": "Maximum 1 à 2 apostrophes/traits d'union par ligne de narration, surtout sur la ligne du CTA. Préférer 'de la personne' à 'de quelqu'un', 'Ce réflexe mesure' à 'C'est un test d'empathie', 'on regarde' à 'on t'explique'. 'abonne-toi' est le seul trait d'union à garder (identité de la chaîne).",
+    "constate_le": "2026-08-11, vidéo 003 : 6 apostrophes dans la ligne 4 → similarité 0.62, sous-titres refusés 3 fois de suite ; réécriture à 1 trait d'union → passage immédiat."
+  },
   "aspect": "9:16",
   "subtitles": "on — look clean, --language fr",
   "language": "fr",

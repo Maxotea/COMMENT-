@@ -1,0 +1,80 @@
+{
+  "topic": "Pourquoi les bâillements sont contagieux",
+  "channel_type": "explainer",
+  "style": "Pastel Flat 2D",
+  "language": "fr",
+  "through_line": {
+    "name": "les neurones miroirs",
+    "asset": "prop_mirror_neurons",
+    "progression": "invisibles en bloc un (le baillement se propage sans explication) -> reveles en bloc deux (le petit amas s'allume dans le cerveau quand on regarde) -> en action en bloc trois (le circuit copie le geste avant meme la decision) -> mesure en bloc quatre (plus le lien est fort, plus l'amas brille)",
+    "resolution": "le bloc final transforme le badge en jauge : l'intensite de l'amas depend de la proximite avec la personne — le baillement devient un test d'attachement, ce qui repond au chien du hook"
+  },
+  "arc": { "hook": 1, "build": [2], "turn": 3, "payoff": 4 },
+  "blocks": [
+    {
+      "n": 1,
+      "arc_role": "hook",
+      "vo_line": "Ton chien bâille quand tu bâilles. Ce réflexe saute d'un cerveau à l'autre sans un mot, et personne ne décide vraiment de le déclencher.",
+      "location": "salon",
+      "through_line_state": "invisible : le baillement saute d'un personnage a l'autre puis au chien, sans explication visible",
+      "shots": [
+        "WIDE static establishing: the pastel living room; the young person sits on the lavender sofa and yawns wide, shoulders rising",
+        "MEDIUM low angle: the second person standing near the sofa catches it — their mouth opens in a yawn a beat later, eyes squeezing shut",
+        "CLOSE-UP: the small sandy dog on the rug looks up, then yawns too, its floppy ears wobbling",
+        "EXTREME CLOSE-UP slow push-in: the dog's face mid-yawn, one baby blue sparkle popping above its head",
+        "MEDIUM: all three sit still, blinking at each other, then the rounded neuron-cluster badge swings in from the right and settles with a bounce"
+      ],
+      "assets_used": ["loc_salon", "char_main", "char_second", "char_dog", "prop_mirror_neurons"]
+    },
+    {
+      "n": 2,
+      "arc_role": "build",
+      "vo_line": "Dans ton cerveau vit un petit groupe de cellules, les neurones miroirs. Ils s'allument quand tu fais un geste, mais aussi quand tu le vois chez quelqu'un.",
+      "location": "cerveau",
+      "through_line_state": "reveles : l'amas mint s'allume dans le cerveau, d'abord pour le geste fait, puis pour le geste vu",
+      "shots": [
+        "WIDE static establishing: the pastel brain diagram; the mint cluster near the front pulses softly twice, thin blue lines glowing between the nodes",
+        "MEDIUM lateral with a gentle drift right: one node lights up bright, then passes a travelling spark along a blue line to its neighbour",
+        "CLOSE-UP high angle: three nodes light in sequence, each popping with a tiny sparkle as it fires",
+        "EXTREME CLOSE-UP slow push-in: a single node's surface, glowing and dimming like a slow heartbeat",
+        "MEDIUM low angle across the cluster: the whole group flares up at once and settles back into a soft steady glow"
+      ],
+      "assets_used": ["loc_brain", "prop_mirror_neurons"]
+    },
+    {
+      "n": 3,
+      "arc_role": "turn",
+      "vo_line": "Voir un bâillement suffit donc à activer le circuit qui le déclenche. Ton cerveau imite avant que tu décides : tu bâilles déjà quand tu comprends pourquoi.",
+      "location": "salon",
+      "through_line_state": "en action : l'amas s'allume au moment ou le regard capte le baillement, et la copie part avant la decision",
+      "shots": [
+        "CLOSE-UP static: the young person's eyes widen as they watch something off-frame, a mint glow flickering at their temple",
+        "MEDIUM high angle with a slow tilt down: the neuron badge hovering beside their head lights up node by node, faster and faster",
+        "EXTREME CLOSE-UP: their mouth starting to open on its own, a small surprised eyebrow lift above",
+        "MEDIUM: they clap a hand over their mouth too late — the yawn wins, shoulders dropping with it",
+        "CLOSE-UP low angle: they shrug at the camera with a resigned smile, the badge sparkling once beside them"
+      ],
+      "assets_used": ["loc_salon", "char_main", "prop_mirror_neurons"]
+    },
+    {
+      "n": 4,
+      "arc_role": "payoff",
+      "vo_line": "Plus tu es proche de la personne, plus tu attrapes son bâillement. Ce petit réflexe mesure donc ton empathie : abonne-toi, demain on regarde les frissons.",
+      "location": "salon",
+      "through_line_state": "mesure : le badge devient une jauge, l'amas brille faiblement pour un inconnu et intensement pour un proche — le chien du hook trouve sa reponse",
+      "shots": [
+        "WIDE static establishing: the living room; the two people sit together on the sofa, the dog curled between them",
+        "EXTREME CLOSE-UP straight on the badge: the cluster glows faintly, only two nodes lit, a small gap between them",
+        "CLOSE-UP lateral on the badge: the cluster flares bright as all nodes light at once, sparkles bursting outward",
+        "MEDIUM: the second person yawns, the first person catches it instantly, and the dog yawns last with a happy wobble",
+        "CLOSE-UP low angle: the young person points at the viewer, a rounded sandy bell pops in beside them and rings with two sparkles, and they wink"
+      ],
+      "assets_used": ["loc_salon", "char_main", "char_second", "char_dog", "prop_mirror_neurons"]
+    }
+  ],
+  "sources": [
+    "https://www.psychologicalscience.org/news/releases/contagious-yawning-may-be-linked-to-empathy.html",
+    "https://royalsocietypublishing.org/doi/10.1098/rsbl.2008.0333",
+    "https://www.nature.com/articles/s41598-021-95083-7"
+  ]
+}
