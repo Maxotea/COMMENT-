@@ -1,7 +1,21 @@
-# Pack de publication — chaîne COMMENT (TikTok · Reels · Shorts)
+# Pack de publication — chaîne ExpliqueMoi (TikTok · Reels · Shorts)
 
-> Préparé le 2026-08-11. Tout est prêt-à-planifier : il ne manque QUE la connexion des comptes
-> de la chaîne (étape OAuth que seul Maxime peut faire — voir « Activation » en bas).
+> ✅ **PLANIFIÉ le 2026-08-11.** Marque Metricool « ExpliqueMoi » (blogId **6704763**),
+> compte TikTok @ExpliqueMoi connecté. Les deux vidéos sont en file d'attente TikTok,
+> publication automatique, 12:00 Europe/Paris — horaires vérifiés après création.
+>
+> | Post | Date | Réseau | ID Metricool | Statut |
+> |---|---|---|---|---|
+> | Vidéo #1 — otite | 2026-08-12 12:00 | TikTok | 360947537 | PENDING, autoPublish |
+> | Vidéo #2 — hoquet | 2026-08-13 12:00 | TikTok | 360947612 | PENDING, autoPublish |
+>
+> Bio, avatar et réglages du compte : `publication/bio-tiktok.md`.
+>
+> **Note technique importante** : l'action Zapier standard `schedule_post` refuse les posts
+> (« You need to include at least one provider ») quel que soit le format des booléens.
+> Contournement en place : l'action `schedule_reel_with_providers` (créée pour ce compte),
+> qui envoie `providers: [{"network":"tiktok"}]` explicitement. C'est elle qu'il faut utiliser
+> pour les prochaines vidéos.
 
 ## Vidéo #1 — Comment on attrape une otite
 
@@ -79,17 +93,17 @@ Action Zapier `schedule_post` — remplacer `BLOGID_COMMENT` :
 ⚠️ Après création : vérifier les heures avec `list_scheduled_posts` (bug de fuseau connu),
 corriger via `bulk_update_post_times`, puis `bulk_set_draft` si on veut rester en brouillon.
 
-## Activation — ce qu'il te reste à faire (5 min)
+## Ce qu'il reste à faire côté compte
 
-Deux chemins, au choix (le premier est celui du pipeline prévu) :
+- [ ] **Passer le compte TikTok en Business** (Paramètres → Gérer le compte → Passer à un compte
+      Business, catégorie Éducation). La publication automatique Metricool ne fonctionne que sur un
+      compte Business — sans ça, les deux posts basculeront en simple rappel de publication manuelle.
+- [ ] **Mettre la bio et l'avatar** (`publication/bio-tiktok.md`).
+- [ ] **Activer le label « contenu généré par IA »** sur chaque publication.
+- [ ] Optionnel : ouvrir Instagram + la chaîne YouTube de marque, les connecter à la même marque
+      Metricool → je planifierai alors les 3 réseaux en un seul appel.
 
-1. **Metricool (recommandé, multi-réseaux)** : créer la marque « COMMENT » dans Metricool
-   (compte contact@oteaproduction.com) et connecter le TikTok + Instagram + YouTube de la chaîne.
-   → Dis-moi ensuite « la marque COMMENT est créée » et je planifie tout le calendrier d'un coup
-   (vidéos 1 et 2, 12:00 Paris, avec correction du bug de fuseau).
-2. **TikTok direct via Higgsfield** : connecter le compte TikTok de la chaîne
-   (outil de connexion TikTok dans l'interface Higgsfield). → Je peux alors préparer le post
-   (brouillon TikTok ou publication directe avec label IA) sans passer par Metricool.
+## Élargir à Instagram / YouTube plus tard
 
-État vérifié le 2026-08-11 : 9 marques Metricool connectées (aucune pour COMMENT), 0 compte TikTok
-connecté côté Higgsfield.
+Ajouter simplement les réseaux dans `networks` de l'action `schedule_reel_with_providers` :
+`"tiktok,instagram,youtube"`. Les URLs des vidéos et les légendes ne changent pas.
