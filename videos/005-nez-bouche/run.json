@@ -1,0 +1,47 @@
+{
+  "video": "005 — Pourquoi ton nez se bouche d'un seul côté",
+  "date": "2026-08-13",
+  "workflow": "faceless-channel-video v2.1 (reprise CHANNEL DNA)",
+  "intake_lock": "Type: Explainer [DNA] · Mode: animé [DNA] · Style: Pastel Flat 2D [DNA, clé réutilisée] · 40s → 4 blocs · 9:16 [DNA] · Sous-titres: clean FR [DNA] · Voix: Ainsley [DNA] · Sujet: le nez bouché d'un seul côté [CTA de la vidéo 4]",
+  "style_key_job_id": "6f332671-7f68-40bd-abd1-e7bf6cba2656",
+  "assets": {
+    "char_main": {"job_id": "9decbeed-3925-4730-99bd-bfbd2add6a5b", "note": "réutilisé depuis la vidéo 001"},
+    "loc_salon": {"job_id": "9ee9754d-aca5-4030-a2b7-21427386aafd", "note": "réutilisé"},
+    "loc_nez": {"job_id": "14dededb-9eaf-4c5b-83e1-a6dd49349eb8", "note": "nouveau — coupe latérale du nez, cornets mint le long du passage"},
+    "loc_nez_cycle": {"job_id": "06538606-9742-4373-8b95-fcd5cc1ca575", "note": "nouveau — vue de face des deux tunnels + petite horloge"},
+    "prop_cornets": {"job_id": "93ce21ac-be84-4b9c-8cd4-7b778afbdde8", "note": "nouveau — badge fil rouge : deux rouleaux, un gonflé rose, un plat mint"}
+  },
+  "blocks_jobs": {
+    "1": "04564b17-66f5-4d08-80a5-3effb7de9188",
+    "2": "32fbd4db-a8e8-434b-9156-563ae1e31897",
+    "3": "e5d78e27-c91a-4517-bf92-f5c63b8deab8",
+    "4": "125dfa97-407f-4e61-aef6-5e4cb575cb89"
+  },
+  "voice_jobs": {
+    "1": {"job_id": "cfa5cf92-d2b4-44c5-8569-0f146a2fa47b", "speech_s": 8.883, "words": 25, "wps": 2.81, "attempt": "paire 2 (les deux prises à 24 mots étaient à 8.18s et 10.14s, ligne allongée à 25 mots)"},
+    "2": {"job_id": "31d2cfca-6726-466c-a3d8-e855d7c2663e", "speech_s": 8.804, "words": 24, "wps": 2.73, "attempt": "paire 1, prise B (la prise A était à 10.29s)"},
+    "3": {"job_id": "59d7cb46-cb9c-4069-a0cc-56a761486b8f", "speech_s": 8.975, "words": 26, "wps": 2.90, "attempt": "paire 1, prise A (la prise B était à 10.14s)"},
+    "4": {"job_id": "0e1031ed-324c-49bc-b002-fc6d10bca13a", "speech_s": 9.087, "words": 24, "wps": 2.64, "attempt": "paire 1, prise B (la prise A était à 13.50s, rate=SLOW)"}
+  },
+  "music_bed_job": {"job_id": "525b328d-f834-4695-ad67-49353f5a85c4", "model": "sonilo_music", "duration_s": 40.02},
+  "validation_methode_2_prises": {
+    "resultat": "3 lignes sur 4 bonnes dès le premier appel, contre 4 essais séquentiels sur la seule ligne 2 de la vidéo 004.",
+    "ecart_mesure_sur_texte_identique": "ligne 1 : 8.18s puis 10.14s · ligne 2 : 10.29s puis 8.80s · ligne 3 : 8.98s puis 10.14s · ligne 4 : 13.50s puis 9.09s",
+    "conclusion": "l'écart entre deux prises du MÊME texte atteint 4.4 s. Le tirage domine complètement le nombre de mots ; la règle est donc de tirer deux fois, pas d'écrire mieux."
+  },
+  "incident_sous_titres": "aucun — 4 blocs acceptés du premier coup (similarités 0.87 / 0.77 / 0.90 / 0.90).",
+  "validators": {
+    "validate_motion_script": {"valid": true, "note": "bande 24-32 mots"},
+    "gate4": "4 blocs 10.006s, 720×1280, 24fps ; coupes détectées 3/4/3/4 à scene>0.15 (les blocs 1 et 3 enchaînent deux plans visuellement proches, le seuil en fusionne un — même comportement que la vidéo 003, accepté)",
+    "gate7": "26 cues burnées",
+    "gate8": "master 720×1280 video 40.0417s / audio 40.055s, puis Topaz 1080p"
+  },
+  "delivery": {
+    "master_720_media_id": "70b9b974-dcfd-4ce7-bfb5-5d763a139be7",
+    "master_720_url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/70b9b974-dcfd-4ce7-bfb5-5d763a139be7.mp4",
+    "upscale_job_id": "5a9cb4f6-fd28-4851-8de1-fa86e533f1ed",
+    "upscaled": "topaz-1080p",
+    "poster_media_id": "7df679fd-8704-4bef-b557-307d72b1dc35",
+    "poster_url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/7df679fd-8704-4bef-b557-307d72b1dc35.jpg"
+  }
+}

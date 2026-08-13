@@ -1,0 +1,80 @@
+{
+  "topic": "Pourquoi les courbatures arrivent deux jours après",
+  "channel_type": "explainer",
+  "style": "Pastel Flat 2D",
+  "language": "fr",
+  "through_line": {
+    "name": "la fibre musculaire fendue",
+    "asset": "prop_fibre",
+    "progression": "intacte en bloc un (le badge arrive alors que tout va bien, la fibre est encore lisse) -> fendue en bloc deux (l'effort ouvre de petites encoches silencieuses dans les brins) -> assiegee en bloc trois (les blobs mint arrivent, la zone gonfle et devient douloureuse, deux jours plus tard) -> reparee en bloc quatre (l'encoche se referme et le brin ressort plus epais)",
+    "resolution": "le bloc final referme l'encoche pendant que le personnage descend enfin l'escalier : la douleur du hook n'etait pas la blessure elle-meme mais le chantier de reparation, ce qui explique le decalage de deux jours"
+  },
+  "arc": { "hook": 1, "build": [2], "turn": 3, "payoff": 4 },
+  "blocks": [
+    {
+      "n": 1,
+      "arc_role": "hook",
+      "vo_line": "Hier soir tu as fait du sport sans ressentir la moindre gêne. Et pourtant demain matin, descendre un escalier va devenir une vraie épreuve.",
+      "location": "gym",
+      "through_line_state": "intacte : tout va bien, le badge apparait au dernier plan avec sa fibre encore lisse",
+      "shots": [
+        "WIDE static: the person finishes a set of squats on the lavender mat and stands up, hands on hips, breathing out",
+        "MEDIUM static: they pick up the pink towel, wipe their forehead and give a satisfied thumbs up to the camera",
+        "CLOSE-UP low angle static: they bend one knee and pat their own thigh twice, shrugging as if to say nothing hurts",
+        "MEDIUM high angle static: they drink from the sandy water bottle, relaxed, the mint dumbbells resting on the mat beside them",
+        "MEDIUM static: the fibre badge swings in from the right and settles beside the person with a bounce, two sparkles popping"
+      ],
+      "assets_used": ["loc_gym", "char_main", "prop_fibre"]
+    },
+    {
+      "n": 2,
+      "arc_role": "build",
+      "vo_line": "Un effort intense crée des milliers de micro-déchirures dans tes fibres musculaires. Elles sont minuscules, indolores, et ton corps ne réagit pas tout de suite.",
+      "location": "muscle",
+      "through_line_state": "fendue : de petites encoches s'ouvrent dans les brins roses sous la tension, sans le moindre signal",
+      "shots": [
+        "WIDE static: the bundle of five pink strands at rest, all smooth and intact, swaying very slightly together",
+        "MEDIUM lateral gentle drift right: the strands stretch and pull taut under tension, thinning slightly along their length",
+        "CLOSE-UP high angle static: a tiny rounded notch opens in the middle of one strand, then a second and a third appear on neighbouring strands",
+        "EXTREME CLOSE-UP slow push-in: one single notch seen up close, its rounded edges perfectly still, no glow and no color change around it",
+        "MEDIUM low angle static: the strands relax back to rest, the little notches still there and completely quiet"
+      ],
+      "assets_used": ["loc_muscle", "prop_fibre"]
+    },
+    {
+      "n": 3,
+      "arc_role": "turn",
+      "vo_line": "Le fameux acide lactique disparaît en moins de deux heures. La vraie douleur vient de la réparation des fibres, un chantier qui met deux jours à monter.",
+      "location": "muscle",
+      "through_line_state": "assiegee : les blobs mint arrivent en nombre, la zone gonfle et pulse — c'est ce chantier, pas la dechirure, qui fait mal",
+      "shots": [
+        "WIDE static: the notched strands lie quiet; a single small mint green round blob drifts in from the left and stops beside one notch",
+        "MEDIUM static: a dozen more mint blobs arrive and gather around the notches, and the area swells gently into a soft rounded mound",
+        "CLOSE-UP high angle static: the mint blobs press in around one notch and the swollen mound pulses slowly, twice, pushing outward against the lavender sheath",
+        "EXTREME CLOSE-UP slow push-in: two mint blobs stitching the notch closed with a soft mint thread, one small baby blue sparkle popping at each stitch",
+        "MEDIUM low angle static: pulled back on the whole bundle, every notch now closed and the strands slightly thicker than before"
+      ],
+      "assets_used": ["loc_muscle", "prop_fibre"]
+    },
+    {
+      "n": 4,
+      "arc_role": "payoff",
+      "vo_line": "Ces fibres repoussent ensuite un peu plus solides. Ta courbature est le reçu de ta séance : abonne-toi, demain on regarde les gargouillis du ventre.",
+      "location": "escalier",
+      "through_line_state": "reparee : l'encoche se referme et le brin ressort plus epais, pendant que le personnage finit enfin son escalier",
+      "shots": [
+        "WIDE static: the person starts down the sandy steps, grabs the mint handrail with both hands and winces, moving very slowly",
+        "EXTREME CLOSE-UP static on the badge: the small notch in the pink strand closes up smoothly and the strand thickens slightly, one baby blue sparkle popping above it",
+        "MEDIUM low angle static: the person reaches the bottom step, straightens up and rubs the front of one thigh, then nods slowly",
+        "CLOSE-UP static: they look down at their own leg and break into a proud grin, chin lifting",
+        "CLOSE-UP low angle static: the person points at the viewer, a rounded sandy yellow bell shape pops in beside them and rings with two sparkles, and they wink"
+      ],
+      "assets_used": ["loc_escalier", "char_main", "prop_fibre"]
+    }
+  ],
+  "sources": [
+    "https://www.ncbi.nlm.nih.gov/books/NBK551553/",
+    "https://pubmed.ncbi.nlm.nih.gov/12617692/",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3273886/"
+  ]
+}
