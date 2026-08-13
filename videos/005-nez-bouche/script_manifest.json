@@ -1,0 +1,80 @@
+{
+  "topic": "Pourquoi ton nez se bouche d'un seul côté",
+  "channel_type": "explainer",
+  "style": "Pastel Flat 2D",
+  "language": "fr",
+  "through_line": {
+    "name": "les cornets nasaux",
+    "asset": "prop_cornets",
+    "progression": "constate en bloc un (une narine passe l'air, l'autre non, sans explication) -> revele en bloc deux (les bourrelets se remplissent de sang et referment le passage) -> mis en cycle en bloc trois (les deux narines echangent leurs roles au rythme d'une horloge) -> resolu en bloc quatre (le badge bascule pendant que le personnage respire, l'alternance devient visible)",
+    "resolution": "le bloc final montre le badge echanger ses deux rouleaux au moment meme ou le personnage change de narine : la narine bouchee du hook n'est pas un symptome mais un tour de garde, et sa jumelle en profite pour se reposer"
+  },
+  "arc": { "hook": 1, "build": [2], "turn": 3, "payoff": 4 },
+  "blocks": [
+    {
+      "n": 1,
+      "arc_role": "hook",
+      "vo_line": "Quand tu es enrhumé, une seule narine se bouche vraiment à la fois. Ce n'est pas un hasard : tes deux narines ne travaillent jamais ensemble.",
+      "location": "salon",
+      "through_line_state": "constate : un cote laisse passer l'air, l'autre est ferme, et rien n'explique encore pourquoi",
+      "shots": [
+        "WIDE static: the person sits on the lavender sofa with a small mint tissue box beside them, sniffing, shoulders slumped",
+        "CLOSE-UP static: their face; they press one finger against the right side of the nose and breathe in, and nothing moves",
+        "CLOSE-UP static: they press the other side instead and a pale baby blue ribbon of air streams in easily, their eyebrows lifting in surprise",
+        "MEDIUM low angle static: they look at the camera puzzled, tilting their head, one hand turned palm up in a questioning shrug",
+        "MEDIUM static: the scroll badge swings in from the right and settles beside the person with a bounce, two sparkles popping"
+      ],
+      "assets_used": ["loc_salon", "char_main", "prop_cornets"]
+    },
+    {
+      "n": 2,
+      "arc_role": "build",
+      "vo_line": "Dans chaque narine, de petits bourrelets appelés cornets se gonflent de sang et rétrécissent le passage. Un côté enfle pendant que l'autre se dégonfle.",
+      "location": "nez",
+      "through_line_state": "revele : les rouleaux mint se remplissent de rose, epaississent et etranglent le ruban d'air bleu",
+      "shots": [
+        "WIDE static: the nose cutaway at rest; the pale blue air ribbon flows smoothly past the three slim mint cushions",
+        "MEDIUM lateral gentle drift right: the first mint cushion slowly fills with soft pink and swells outward, thickening into the passage",
+        "CLOSE-UP high angle static: all three cushions are now puffed and pink, and the blue air ribbon squeezes into a thin trickle between them",
+        "EXTREME CLOSE-UP slow push-in: the surface of one swollen cushion, soft pink pulsing gently under its outline, a tiny baby blue sparkle popping beside it",
+        "MEDIUM low angle static: the cushions deflate back to slim mint one after another and the blue air ribbon widens again"
+      ],
+      "assets_used": ["loc_nez", "prop_cornets"]
+    },
+    {
+      "n": 3,
+      "arc_role": "turn",
+      "vo_line": "Ce cycle nasal tourne en permanence, même quand tu vas bien. Le rhume ne le crée pas : il rend juste le côté fermé impossible à ignorer.",
+      "location": "nez_cycle",
+      "through_line_state": "mis en cycle : les deux tunnels echangent leurs roles au rythme de la petite horloge, en bonne sante comme enrhume",
+      "shots": [
+        "WIDE static: both tunnels visible; the left is narrow with puffed pink cushions, the right is wide open, and the little sandy clock hand ticks forward",
+        "MEDIUM static: the clock hand sweeps a quarter turn, and the left cushions begin to shrink while the right ones begin to swell",
+        "CLOSE-UP high angle static: the swap completes — the left tunnel is now wide open and the right is narrow, a pale blue air ribbon switching sides with it",
+        "EXTREME CLOSE-UP slow push-in: the sandy clock face alone, its hand sweeping steadily, two soft pink pulses passing behind it in alternation",
+        "MEDIUM low angle static: pulled back on both tunnels, they swap once more in a smooth alternating rhythm"
+      ],
+      "assets_used": ["loc_nez_cycle", "prop_cornets"]
+    },
+    {
+      "n": 4,
+      "arc_role": "payoff",
+      "vo_line": "Pendant que la narine ouverte fait tout le travail, sa voisine se repose et se réhydrate en silence. Abonne-toi, demain on regarde les courbatures.",
+      "location": "salon",
+      "through_line_state": "resolu : le badge echange ses deux rouleaux au moment ou le personnage change de narine — la narine fermee du hook se revele etre un tour de repos",
+      "shots": [
+        "CLOSE-UP static: the person on the sofa breathes in calmly, a pale baby blue ribbon of air flowing in on one side of the nose only",
+        "EXTREME CLOSE-UP static on the badge: the puffed pink cushion slowly deflates to slim mint while the slim one swells to puffed pink, trading places",
+        "MEDIUM high angle static: the person breathes again and the blue air ribbon now flows in on the other side instead, their eyes widening in recognition",
+        "MEDIUM static: they grin, tap the side of their nose twice with one finger and give a small satisfied nod",
+        "CLOSE-UP low angle static: the person points at the viewer, a rounded sandy yellow bell shape pops in beside them and rings with two sparkles, and they wink"
+      ],
+      "assets_used": ["loc_salon", "char_main", "prop_cornets"]
+    }
+  ],
+  "sources": [
+    "https://www.ncbi.nlm.nih.gov/books/NBK546636/",
+    "https://pubmed.ncbi.nlm.nih.gov/8858615/",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5573528/"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "video": "004 — Pourquoi tu as des frissons",
+  "date": "2026-08-13",
+  "workflow": "faceless-channel-video v2.1 (reprise CHANNEL DNA)",
+  "intake_lock": "Type: Explainer [DNA] · Mode: animé [DNA] · Style: Pastel Flat 2D [DNA, clé réutilisée] · 40s → 4 blocs · 9:16 [DNA] · Sous-titres: clean FR [DNA] · Voix: Ainsley [DNA] · Sujet: les frissons [CTA de la vidéo 3]",
+  "style_key_job_id": "6f332671-7f68-40bd-abd1-e7bf6cba2656",
+  "assets": {
+    "char_main": {"job_id": "9decbeed-3925-4730-99bd-bfbd2add6a5b", "note": "réutilisé depuis la vidéo 001"},
+    "char_dog": {"job_id": "333352f9-fe79-4fe1-98b9-b6a6e7875ae1", "note": "réutilisé"},
+    "loc_salon": {"job_id": "9ee9754d-aca5-4030-a2b7-21427386aafd", "note": "réutilisé"},
+    "loc_peau": {"job_id": "5604f6e3-6a51-471b-9fab-2d638482af31", "note": "nouveau — coupe de peau, poils sur bulbes lavande + rubans mint"},
+    "loc_peau_macro": {"job_id": "3be68be9-3297-468c-8c4f-971349c8aafb", "note": "nouveau — généré en couverture, finalement non utilisé dans les blocs"},
+    "loc_neige": {"job_id": "818cfccc-3da3-4e45-b045-32dd207e5a12", "note": "nouveau — clairière enneigée"},
+    "prop_muscle": {"job_id": "3f90e201-ebdd-4dc7-aa66-3b0b9c6c4a4b", "note": "nouveau — badge fil rouge : poil sur bulbe + ruban-muscle mint"}
+  },
+  "blocks_jobs": {
+    "1": "7e0d9f36-414b-4566-b078-905c85d5c28e",
+    "2": "c0d6ab01-8d84-492a-a409-cbf29b30ff64",
+    "3": "7e06235b-f773-4b37-ba0b-e67f7765a465",
+    "4": "aa9aee60-5e40-4e94-b1b4-28e04c1953bf"
+  },
+  "voice_jobs": {
+    "1": {"job_id": "8d9a56ce-c961-4e87-94f8-66caa6ac70c9", "speech_s": 8.845, "words": 24, "wps": 2.71, "attempt": 1},
+    "2": {"job_id": "60964686-44b2-483e-9c8c-61c49ecb476c", "speech_s": 8.892, "words": 26, "wps": 2.92, "attempt": 4, "note": "24 mots → 8.09s (sous le plancher) ; 27 mots → 9.80s ; 28 mots → 12.18s ; 26 mots → 8.89s retenu"},
+    "3": {"job_id": "3a70acdd-e13a-48c2-9fdb-637801f74f2a", "speech_s": 9.141, "words": 24, "wps": 2.63, "attempt": 2, "note": "1re version à 23 mots refusée par le validateur (bande 24-32), un mot ajouté"},
+    "4": {"job_id": "ecef4488-9ef5-4d66-b4c7-c4be5a304be9", "speech_s": 9.0, "words": 25, "wps": 2.78, "attempt": 1}
+  },
+  "music_bed_job": {"job_id": "0ed0649c-dc48-4aad-9f23-b1dde48bb79d", "model": "sonilo_music"},
+  "observation_debit_voix": {
+    "constat": "à texte identique, la même voix Ainsley lit entre 2.30 et 2.97 mots/seconde selon la prise. Un compte de mots ne détermine donc PAS la durée : 26 mots ont donné 8.89s, 28 mots 12.18s.",
+    "methode_retenue": "soumettre 2 prises du même texte en une seule fois, mesurer les deux avec speech_metrics.sh, garder celle qui tombe entre 8.6 et 9.2s. Coût identique à un aller-retour séquentiel, mais une seule attente.",
+    "regle_ajoutee": "channel_dna.json → regle_debit_voix_fr"
+  },
+  "incident_sous_titres": "aucun — les 4 blocs sont passés du premier coup (similarités 0.78 / 0.85 / 0.77 / 0.90), la règle des 1-2 apostrophes par ligne établie sur la vidéo 003 a tenu.",
+  "validators": {
+    "validate_motion_script": {"valid": true, "note": "bande 24-32 mots"},
+    "gate4": "4 blocs 10.006s, 720×1280, 24fps ; 4 coupes détectées par bloc (5 plans) à scene>0.15, aux temps 2.0/3.9/6.0/8.0s",
+    "gate7": "24 cues burnées",
+    "gate8": "1080×1920 après Topaz ; master video 40.0417s / audio 40.055s",
+    "note_outillage": "la détection de coupes doit interroger le champ ffprobe `pts_time` et non `pkt_pts_time` (supprimé des ffmpeg récents) — sinon elle renvoie silencieusement 0 coupe sur des blocs pourtant corrects"
+  },
+  "delivery": {
+    "master_720_media_id": "2fc7160b-0247-45a7-a515-0284673728fe",
+    "master_720_url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/2fc7160b-0247-45a7-a515-0284673728fe.mp4",
+    "upscale_job_id": "b9d189fb-a840-4cd5-a767-ee4bdbead584",
+    "upscaled": "topaz-1080p",
+    "final_1080_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260813_081032_b9d189fb-a840-4cd5-a767-ee4bdbead584.mp4",
+    "poster_media_id": "9348ab84-8776-42dc-a383-954c082e3e2d",
+    "poster_url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/9348ab84-8776-42dc-a383-954c082e3e2d.jpg",
+    "metricool_post_id": 361594247,
+    "publication": "TikTok @expliquemoien40sec — 2026-08-14 12:00 Europe/Paris, autoPublish, privacyOption PUBLIC_TO_EVERYONE vérifié dans la réponse"
+  }
+}

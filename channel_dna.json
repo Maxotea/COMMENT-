@@ -20,6 +20,24 @@
     "delivery": "casual conversational French explainer, warm bright timbre, playful deadpan wit, lively pace",
     "pace_note": "voix rapide en français : viser ~25-28 tokens par ligne de 10s (2.8-3.1 mots/s mesurés), pas la bande nominale 27-32"
   },
+  "regle_debit_voix_fr": {
+    "probleme": "Le nombre de mots ne détermine PAS la durée de la prise. À texte strictement identique, la voix Ainsley lit entre 2.30 et 2.97 mots/seconde selon le tirage. Mesuré sur la vidéo 004 : 24 mots → 8.09s puis 10.14s ; 26 mots → 8.89s ; 28 mots → 12.18s. Réécrire la ligne pour corriger une durée revient donc à jouer aux dés en payant une attente à chaque coup.",
+    "symptome": "prise hors de la fenêtre utile (< 8.6s laisse un blanc en fin de bloc, > 9.4s colle la voix à la coupe suivante), alors que speech_metrics affiche rate=ok — le débit est bon, c'est le remplissage du bloc de 10s qui ne l'est pas.",
+    "regle": "Soumettre systématiquement DEUX prises du même texte dans le même appel generate_audio_batch, mesurer les deux avec speech_metrics.sh, garder celle qui tombe entre 8.6 et 9.2s. Même coût qu'un aller-retour séquentiel, mais une seule attente. Ne réécrire la ligne que si les DEUX prises ratent la fenêtre du même côté.",
+    "constate_le": "2026-08-13, vidéo 004 : 4 essais gaspillés sur la ligne 2 en réécrivant le texte. Méthode des 2 prises appliquée à la vidéo 005 : 3 lignes sur 4 bonnes au premier appel."
+  },
+  "regle_detection_coupes": {
+    "probleme": "La vérification du nombre de plans par bloc doit lire le champ ffprobe `pts_time`. Les ffmpeg récents ont supprimé `pkt_pts_time` : la commande ne renvoie alors AUCUNE erreur, juste une liste vide.",
+    "symptome": "`cuts=0` sur les 4 blocs alors qu'ils contiennent bien leurs 5 plans — faux négatif silencieux qui pousse à regénérer des blocs corrects.",
+    "regle": "ffprobe -v error -f lavfi -i \"movie=bloc.mp4,select=gt(scene\\,0.15)\" -show_entries frame=pts_time -of csv=p=0 | grep -c .",
+    "constate_le": "2026-08-13, vidéo 004."
+  },
+  "regle_publication_tiktok": {
+    "probleme": "Un post Metricool créé sans `tiktokData.privacyOption` est accepté par l'API (statut PENDING, tout semble normal) puis REJETÉ par TikTok à l'heure de publication.",
+    "symptome": "providers[0].status = ERROR, detailedStatus = 'Publish Tiktok video error: does not specified privacy options'. Rien ne prévient : le post est simplement passé à l'heure dite et n'est jamais sorti.",
+    "regle": "Toujours envoyer tiktokData = {privacyOption: 'PUBLIC_TO_EVERYONE', photoCoverIndex: 0}. C'est intégré à l'action `schedule_reel_with_providers` depuis le 2026-08-13. Après chaque planification, relire le post avec list_scheduled_posts et vérifier que `tiktokData.privacyOption` est bien stocké.",
+    "constate_le": "2026-08-13 : la vidéo 001 (otite), planifiée le 11/08 pour le 12/08 12:00, n'est jamais sortie pour cette raison. Les vidéos 002 et 003 n'ont été publiées que parce qu'elles ont été recréées à la main."
+  },
   "regle_sous_titres_fr": {
     "probleme": "L'aligneur de sous-titres compare les mots de Whisper aux mots du script. Whisper coupe les élisions en deux tokens (c'est → 'c' + 'est', d'empathie → 'd' + 'empathie', abonne-toi → 'abonne' + 'toi'), alors que le script les garde soudés après normalisation ('cest', 'dempathie', 'abonnetoi'). Chaque apostrophe ou trait d'union compte donc comme une erreur d'alignement.",
     "symptome": "'Whisper/script similarity 0.63 is below 0.750; refusing to burn unverified captions' — sur le bloc qui contient le plus d'apostrophes (souvent le CTA final). Changer de modèle Whisper ne corrige RIEN : le ratio reste identique.",

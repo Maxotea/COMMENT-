@@ -1,0 +1,102 @@
+{
+  "topic": "Pourquoi tu as des frissons",
+  "channel_type": "explainer",
+  "style": "Pastel Flat 2D",
+  "language": "fr",
+  "through_line": {
+    "name": "le muscle arrecteur",
+    "asset": "prop_muscle",
+    "progression": "cache en bloc un (on ne voit que la chair de poule qui monte sur le bras, sans cause visible) -> revele en bloc deux (le badge s'ouvre : un ruban mint attache au bulbe du poil, qui se contracte et redresse le poil) -> compare en bloc trois (le meme ruban gonfle le pelage d'un animal a fourrure et emprisonne de l'air chaud) -> resolu en bloc quatre (le badge se declenche pour une emotion, exactement comme pour le froid)",
+    "resolution": "le bloc final montre le meme circuit declenche par une emotion et non par le froid : le badge pulse en rose, le poil se dresse, la vague remonte le bras — le reflexe du hook trouve sa cause, et l'on comprend qu'il ne sert plus a rien chez l'humain"
+  },
+  "arc": {
+    "hook": 1,
+    "build": [
+      2
+    ],
+    "turn": 3,
+    "payoff": 4
+  },
+  "blocks": [
+    {
+      "n": 1,
+      "arc_role": "hook",
+      "vo_line": "Ta peau se hérisse devant une musique, alors que tu n'as pas froid. Le coupable est un muscle minuscule, planté au pied de chaque poil.",
+      "location": "salon",
+      "through_line_state": "cache : la chair de poule monte sur le bras sans cause visible, le badge n'apparait qu'au dernier plan",
+      "shots": [
+        "WIDE static: the person sits on the lavender sofa with headphones on, calm, then a shiver ripples up their shoulders and they hug their arms",
+        "CLOSE-UP static: their forearm; tiny rounded bumps rise across the skin one after another, three small sandy hairs standing straight up",
+        "MEDIUM low angle static: the person looks down at their own arm and raises one eyebrow, puzzled, then glances at the window",
+        "EXTREME CLOSE-UP slow push-in: one single bump on the skin, the small hair quivering upright, one baby blue sparkle popping beside it",
+        "MEDIUM static: the hair-and-muscle badge swings in from the right and settles beside the person with a bounce, two sparkles popping"
+      ],
+      "assets_used": [
+        "loc_salon",
+        "char_main",
+        "prop_muscle"
+      ]
+    },
+    {
+      "n": 2,
+      "arc_role": "build",
+      "vo_line": "Ce petit muscle arrecteur se contracte et redresse le poil d'un coup sec. La peau se plisse autour de la racine : voilà la chair de poule.",
+      "location": "peau",
+      "through_line_state": "revele : le ruban mint attache au bulbe se raccourcit, fait basculer le bulbe et redresse le poil, la peau se plisse autour",
+      "shots": [
+        "WIDE static: the skin cutaway at rest; the three sandy hairs lie flat and sway gently, the mint ribbon-muscles slack",
+        "MEDIUM lateral gentle drift right: the first mint ribbon-muscle tightens and shortens sharply, tugging its lavender bulb sideways",
+        "CLOSE-UP high angle static: the sandy hair snaps upright as the bulb tilts, and the pink skin puckers into a rounded bump around its base",
+        "EXTREME CLOSE-UP slow push-in: the mint ribbon-muscle quivering under tension, a tiny baby blue sparkle popping at its anchor point",
+        "MEDIUM low angle static: all three hairs snap upright one after another and three rounded bumps rise in a row"
+      ],
+      "assets_used": [
+        "loc_peau",
+        "prop_muscle"
+      ]
+    },
+    {
+      "n": 3,
+      "arc_role": "turn",
+      "vo_line": "Chez un animal à fourrure, ce réflexe gonfle tout le pelage et emprisonne une couche d'air chaud. Toi, tu hérisses trois poils pour rien.",
+      "location": "neige",
+      "through_line_state": "compare : le meme ruban souleve tout un pelage et cree une couche d'air chaud isolante, la ou l'humain ne dresse que trois poils inutiles",
+      "shots": [
+        "WIDE static: the snowy clearing; the small sandy dog trots in from the left and stops, snowflakes drifting past it",
+        "MEDIUM static: the dog's whole coat puffs up at once, doubling its outline into a round fluffy ball, and it shakes once",
+        "EXTREME CLOSE-UP static: the puffed fur; the raised hairs trap little baby blue air pockets that glow faintly between them",
+        "CLOSE-UP low angle static: the dog sits contentedly in its puffed coat, blinking slowly, snow settling on its ears",
+        "MEDIUM static: beside the dog the hair-and-muscle badge pops in with only three lonely sandy hairs standing up and a tiny puff of air escaping between them"
+      ],
+      "assets_used": [
+        "loc_neige",
+        "char_dog",
+        "prop_muscle"
+      ]
+    },
+    {
+      "n": 4,
+      "arc_role": "payoff",
+      "vo_line": "Une émotion forte libère la même adrénaline que le grand froid, et le circuit se déclenche pareil : abonne-toi, demain on regarde le nez bouché.",
+      "location": "salon",
+      "through_line_state": "resolu : le badge pulse en rose sous l'effet d'une emotion et non du froid, le poil se dresse et la vague remonte le bras — meme circuit, autre declencheur",
+      "shots": [
+        "CLOSE-UP static: the person on the sofa with headphones, eyes closing as a warm rush passes over them, shoulders lifting",
+        "EXTREME CLOSE-UP static on the badge: a soft pink pulse travels up through the badge and the little hair springs upright",
+        "MEDIUM high angle static: bumps ripple up the person's forearm in a wave from wrist to elbow",
+        "MEDIUM static: the person opens their eyes, looks at their arm and grins, then rubs the arm once",
+        "CLOSE-UP low angle static: the person points at the viewer, a rounded sandy yellow bell shape pops in beside them and rings with two sparkles, and they wink"
+      ],
+      "assets_used": [
+        "loc_salon",
+        "char_main",
+        "prop_muscle"
+      ]
+    }
+  ],
+  "sources": [
+    "https://www.ncbi.nlm.nih.gov/books/NBK555903/",
+    "https://www.cell.com/cell/fulltext/S0092-8674(20)30752-9",
+    "https://www.nature.com/articles/s41598-020-71812-2"
+  ]
+}
