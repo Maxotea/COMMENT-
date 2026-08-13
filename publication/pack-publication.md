@@ -184,11 +184,13 @@ corriger via `bulk_update_post_times`, puis `bulk_set_draft` si on veut rester e
 
 ## Ce qu'il reste à faire côté compte
 
-- [ ] **Passer le compte TikTok en Business** (Paramètres → Gérer le compte → Passer à un compte
-      Business, catégorie Éducation). La publication automatique Metricool ne fonctionne que sur un
-      compte Business — sans ça, les deux posts basculeront en simple rappel de publication manuelle.
+- [x] ~~Passer le compte TikTok en Business~~ — **fait** : les vidéos #2 et #3 sont sorties en
+      publication automatique (statut PUBLISHED avec URL publique), ce qui prouve que le compte
+      est bien en Business et que Metricool a le droit de publier seul.
 - [ ] **Mettre la bio et l'avatar** (`publication/bio-tiktok.md`).
-- [ ] **Activer le label « contenu généré par IA »** sur chaque publication.
+- [x] ~~Activer le label « contenu généré par IA »~~ — automatique : les fichiers Higgsfield portent
+      leurs métadonnées C2PA, TikTok appose le label seul à l'ingestion. À vérifier une fois à l'œil
+      sur une publication réelle.
 - [ ] Optionnel : ouvrir Instagram + la chaîne YouTube de marque, les connecter à la même marque
       Metricool → je planifierai alors les 3 réseaux en un seul appel.
 
