@@ -1,0 +1,49 @@
+{
+  "video": "006 — Pourquoi les courbatures arrivent deux jours après",
+  "date": "2026-08-13",
+  "workflow": "faceless-channel-video v2.1 (reprise CHANNEL DNA)",
+  "intake_lock": "Type: Explainer [DNA] · Mode: animé [DNA] · Style: Pastel Flat 2D [DNA, clé réutilisée] · 40s → 4 blocs · 9:16 [DNA] · Sous-titres: clean FR [DNA] · Voix: Ainsley [DNA] · Sujet: les courbatures [CTA de la vidéo 5]",
+  "style_key_job_id": "6f332671-7f68-40bd-abd1-e7bf6cba2656",
+  "assets": {
+    "char_main": {"job_id": "9decbeed-3925-4730-99bd-bfbd2add6a5b", "note": "réutilisé depuis la vidéo 001"},
+    "loc_gym": {"job_id": "71e21949-dbd7-4e95-9a9a-fdadd45fb2f5", "note": "nouveau — coin sport : tapis lavande, haltères mint, gourde sable"},
+    "loc_muscle": {"job_id": "38ddc219-3664-444d-a6f3-ead599e1d5b7", "note": "nouveau — coupe de tissu musculaire, cinq brins roses sous gaine lavande"},
+    "loc_escalier": {"job_id": "b87aa254-ee41-4267-8bea-ebff702a832e", "note": "nouveau — escalier intérieur, rampe mint"},
+    "prop_fibre": {"job_id": "e1758a5f-7cf8-410c-8453-df7299ef4251", "note": "nouveau — badge fil rouge : un brin rose avec une encoche"}
+  },
+  "blocks_jobs": {
+    "1": "122fb9e4-4ea9-4373-b270-280a164d5403",
+    "2": "a930c742-7680-43ba-a550-395bcb329bff",
+    "3": "9ab5e972-4bf4-4642-b6d7-9f8643f7ae6b",
+    "4": "dfe62408-7133-47a8-bd65-3a30654f48d7"
+  },
+  "voice_jobs": {
+    "1": {"job_id": "db7c1eb2-0104-4fbe-a38a-4e709d097e5b", "speech_s": 9.5, "words": 24, "wps": 2.53, "attempt": "10 prises, 4 formulations — voir incident_registre_de_langue"},
+    "2": {"job_id": "f4cdd66c-248e-4564-883c-2eec5d47b8b5", "speech_s": 9.14, "words": 25, "wps": 2.74, "attempt": "paire 2 (28 mots donnaient 10.5s et 11.8s, ligne raccourcie à 25 mots)"},
+    "3": {"job_id": "d15b8048-c242-4852-a311-677b1a302c3c", "speech_s": 8.728, "words": 27, "wps": 3.09, "attempt": "paire 1, prise A"},
+    "4": {"job_id": "29e63192-fa1f-48ff-b480-49f9afcd8c34", "speech_s": 9.8, "words": 24, "wps": 2.45, "attempt": "paire 2, prise B ; les 3 prises étaient entre 9.80 et 10.43s, la plus courte a été retenue (dans la fenêtre du gate mais serrée)"}
+  },
+  "music_bed_job": {"job_id": "607efb30-b66c-406c-9a1a-3717f0051a65", "model": "sonilo_music"},
+  "incident_registre_de_langue": {
+    "symptome": "la ligne 1 est restée hors fenêtre sur 10 prises consécutives. Version conversationnelle (24 mots) : 7.46 / 6.80 / 6.63 s, rate=RUSHED à chaque fois.",
+    "fausse_piste": "allonger la ligne. Passée de 24 à 29 mots, elle a été lue ENCORE PLUS VITE (3.53 → 3.86 puis 4.08 mots/s) et la durée n'a quasiment pas bougé (6.8 → 7.5 s). Ajouter des mots à une phrase que le modèle lit vite ne l'allonge pas.",
+    "sur_correction": "réécriture en vocabulaire lourd (« enchaîné », « ressentir », « difficulté », « deviendra », « véritable ») : 12.80 / 10.50 / 11.18 s, rate=SLOW. Le curseur est passé d'un extrême à l'autre.",
+    "cause_reelle": "ce n'est pas le nombre de mots qui pilote la durée mais le REGISTRE DE LANGUE. Une phrase familière faite de mots courts et fréquents (« tu as fait du sport hier soir ») déclenche une diction rapide et enjouée ; une phrase à vocabulaire soutenu et polysyllabique déclenche une diction lente et posée. L'écart mesuré va de 1.88 à 4.08 mots/s sur une même voix, soit plus du double.",
+    "correctif": "registre mixte — une ou deux tournures soutenues insérées dans une phrase par ailleurs simple (« sans ressentir la moindre gêne », « une vraie épreuve »). Prise retenue : 9.50 s.",
+    "regle_ajoutee": "channel_dna.json → regle_debit_voix_fr, section registre"
+  },
+  "validators": {
+    "validate_motion_script": {"valid": true},
+    "gate4": "4 blocs 10.006s, 720×1280, 24fps ; coupes 5/3/3/6 (les blocs 2 et 3 enchaînent des plans de diagramme très proches, le seuil scene>0.15 en fusionne)",
+    "gate7": "25 cues, similarité globale script/Whisper 0.937",
+    "gate8": "master 720×1280, audio 40.055s, puis Topaz 1080p"
+  },
+  "delivery": {
+    "master_720_media_id": "ee6cf07b-aab4-4dff-ae9c-c5332ec4a271",
+    "master_720_url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/ee6cf07b-aab4-4dff-ae9c-c5332ec4a271.mp4",
+    "upscale_job_id": "7f19750c-8b31-4d5a-b5e2-ecc3bffa10e8",
+    "upscaled": "topaz-1080p",
+    "poster_media_id": "13875f2c-1d3d-46fb-a3e6-87c582e61d8c",
+    "poster_url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/13875f2c-1d3d-46fb-a3e6-87c582e61d8c.jpg"
+  }
+}

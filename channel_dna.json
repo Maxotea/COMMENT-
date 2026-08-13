@@ -24,7 +24,14 @@
     "probleme": "Le nombre de mots ne détermine PAS la durée de la prise. À texte strictement identique, la voix Ainsley lit entre 2.30 et 2.97 mots/seconde selon le tirage. Mesuré sur la vidéo 004 : 24 mots → 8.09s puis 10.14s ; 26 mots → 8.89s ; 28 mots → 12.18s. Réécrire la ligne pour corriger une durée revient donc à jouer aux dés en payant une attente à chaque coup.",
     "symptome": "prise hors de la fenêtre utile (< 8.6s laisse un blanc en fin de bloc, > 9.4s colle la voix à la coupe suivante), alors que speech_metrics affiche rate=ok — le débit est bon, c'est le remplissage du bloc de 10s qui ne l'est pas.",
     "regle": "Soumettre systématiquement DEUX prises du même texte dans le même appel generate_audio_batch, mesurer les deux avec speech_metrics.sh, garder celle qui tombe entre 8.6 et 9.2s. Même coût qu'un aller-retour séquentiel, mais une seule attente. Ne réécrire la ligne que si les DEUX prises ratent la fenêtre du même côté.",
-    "constate_le": "2026-08-13, vidéo 004 : 4 essais gaspillés sur la ligne 2 en réécrivant le texte. Méthode des 2 prises appliquée à la vidéo 005 : 3 lignes sur 4 bonnes au premier appel."
+    "constate_le": "2026-08-13, vidéo 004 : 4 essais gaspillés sur la ligne 2 en réécrivant le texte. Méthode des 2 prises appliquée à la vidéo 005 : 3 lignes sur 4 bonnes au premier appel.",
+    "registre": {
+      "principe": "Quand les deux prises ratent la fenêtre DU MÊME CÔTÉ, ce n'est plus le tirage : c'est le REGISTRE DE LANGUE de la phrase. Le levier n'est pas le nombre de mots, c'est le choix des mots.",
+      "familier_donc_rapide": "Une phrase faite de mots courts et fréquents (« tu as fait du sport hier soir et tu ne sens toujours rien ») déclenche une diction rapide et enjouée : 3.2 à 4.1 mots/s. Ajouter des mots ne l'allonge PAS — testé, la ligne passée de 24 à 29 mots a été lue encore plus vite et n'a gagné que 0.7 s.",
+      "soutenu_donc_lent": "Une phrase à vocabulaire polysyllabique (« sans ressentir la moindre difficulté », « deviendra une véritable épreuve ») déclenche une diction lente et posée : 1.9 à 2.3 mots/s.",
+      "regle": "Ligne trop courte → remplacer un ou deux mots familiers par des tournures plus soutenues. Ligne trop longue → faire l'inverse. Viser un registre MIXTE : une ou deux tournures soutenues dans une phrase par ailleurs simple.",
+      "constate_le": "2026-08-13, vidéo 006 : 10 prises sur la ligne 1 avant de comprendre. L'écart de débit sur une même voix va de 1.88 à 4.08 mots/s, soit plus du double."
+    }
   },
   "regle_detection_coupes": {
     "probleme": "La vérification du nombre de plans par bloc doit lire le champ ffprobe `pts_time`. Les ffmpeg récents ont supprimé `pkt_pts_time` : la commande ne renvoie alors AUCUNE erreur, juste une liste vide.",

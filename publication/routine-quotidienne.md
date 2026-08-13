@@ -2,6 +2,8 @@
 
 **État : créée le 2026-08-13, id `trig_01Mu7zmXeawv4pQeyfkReSM7`, tous les jours à 06:00 heure de Paris (04:00 UTC).**
 
+*Prompt mis à jour le 2026-08-13 après les vidéos 004-006 : règle des deux prises, registre de langue, `privacyOption` TikTok, relecture des posts en erreur. Le prompt stocké dans la routine et celui reproduit ci-dessous sont identiques.*
+
 > ⚠️ **Action requise avant qu'elle serve à quelque chose.** Le planificateur a créé la routine
 > **sans les connecteurs** Higgsfield et Zapier/Metricool. Une session qui démarre sans eux ne peut
 > ni générer la vidéo ni la planifier : elle se réveillerait pour rien.
@@ -10,6 +12,9 @@
 > attacher les connecteurs **Higgsfield** et **Zapier** (et GitHub si proposé), puis enregistrer.
 > Si la routine n'est pas modifiable, la recréer depuis cette même interface en collant le prompt
 > ci-dessous — c'est le seul chemin qui attache les connecteurs de façon fiable.
+>
+> Vérifié le 13/08 : la routine liste bien ses outils de base (Bash, Read, Write, WebFetch…) mais
+> **aucun serveur MCP**. Sans Higgsfield elle ne peut pas générer, sans Zapier elle ne peut pas planifier.
 >
 > Tant que ce n'est pas fait, la production quotidienne reste manuelle (il suffit de me demander
 > « lance la vidéo du jour »).
@@ -41,8 +46,9 @@ Structure narrative : hook chiffré ou contre-intuitif en une phrase courte -> u
 
 Fil rouge obligatoire : un objet physique unique présent dans les 4 blocs, qui évolue et se résout au dernier (donne-lui son propre asset).
 
-Deux pièges déjà rencontrés, à respecter sans exception :
-- Débit voix : la voix Ainsley lit vite en français. Vise 24-28 mots par ligne de 10 s, pas la bande nominale du workflow. Mesure chaque prise avec speech_metrics.sh ; vise rate=ok et zéro pause interne >= 0,8 s. Budget de 3 essais par ligne, ensuite garde la meilleure et signale-le.
+Trois pièges déjà rencontrés, à respecter sans exception :
+- Débit voix : soumets TOUJOURS deux prises du même texte dans le même appel generate_audio_batch, mesure-les avec speech_metrics.sh et garde celle dont la parole tombe entre 8,6 et 9,2 s (rate=ok, zéro pause interne >= 0,8 s). À texte identique la même voix varie de 1,9 à 4,1 mots/s : le tirage compte plus que le nombre de mots, donc tire deux fois plutôt que de réécrire.
+- Si les DEUX prises ratent la fenêtre du même côté, ce n'est plus le hasard : c'est le registre de langue. Une phrase familière faite de mots courts est lue vite (jusqu'à 4,1 mots/s) et l'allonger ne sert à rien — elle sera lue encore plus vite. Une phrase à vocabulaire soutenu est lue lentement (jusqu'à 1,9 mots/s). Trop court -> remplace un ou deux mots familiers par des tournures plus soutenues ; trop long -> fais l'inverse. Voir regle_debit_voix_fr dans channel_dna.json.
 - Sous-titres : l'aligneur casse sur les élisions françaises (voir regle_sous_titres_fr dans channel_dna.json). Maximum 1 à 2 apostrophes ou traits d'union par ligne, surtout sur la ligne du CTA. Si le burn est refusé pour cause de similarité, ne change pas de modèle Whisper — réécris la ligne avec moins d'apostrophes.
 
 Le sandbox Higgsfield est éphémère : enchaîne téléchargements, assemblage et upload dans un seul appel, et relance depuis les URLs si tu perds les fichiers.
@@ -51,9 +57,9 @@ Le sandbox Higgsfield est éphémère : enchaîne téléchargements, assemblage 
 
 - Liste d'abord les posts déjà programmés : action Zapier Metricool code_action_metricoolcliapi__list_scheduled_posts, blogId 6704763 (marque ExpliqueMoi), sur les 10 prochains jours.
 - Choisis le premier jour libre après le dernier post programmé, à 12:00 heure de Paris. Ne double jamais un créneau déjà pris.
-- Planifie avec l'action code_action_metricoolcliapi__schedule_reel_with_providers (paramètres : blog_id 6704763, user_id 3689627, networks tiktok, date_time AAAA-MM-JJT12:00:00, auto_publish true, draft false, media_url = l'URL de la vidéo 1080p, text = la légende). N'utilise pas l'action schedule_post standard : elle échoue avec « You need to include at least one provider ».
+- Planifie avec l'action code_action_metricoolcliapi__schedule_reel_with_providers (paramètres : blog_id 6704763, user_id 3689627, networks tiktok, date_time AAAA-MM-JJT12:00:00, auto_publish true, draft false, privacy_option PUBLIC_TO_EVERYONE, ai_generated true, media_url = l'URL de la vidéo 1080p, text = la légende). N'utilise pas l'action schedule_post standard : elle échoue avec « You need to include at least one provider ».
 - Légende : hook de la vidéo reformulé + le mécanisme en une ligne + « Abonne-toi — demain : [sujet suivant] » + 6 hashtags maximum dont #corpshumain #lesavaistu #apprendresurtiktok.
-- Revérifie ensuite avec list_scheduled_posts que la date enregistrée est bien celle voulue (bug de fuseau connu).
+- Revérifie ensuite avec list_scheduled_posts DEUX choses : que la date enregistrée est bien celle voulue (bug de fuseau connu), et que tiktokData.privacyOption est bien présent sur le post. Un post sans ce champ est accepté par Metricool puis rejeté par TikTok à l'heure dite, sans aucune alerte — c'est ce qui a fait perdre la vidéo 001.
 
 ## 4. Archiver et livrer
 
@@ -72,7 +78,9 @@ Ces règles sont dans le prompt parce qu'elles ont coûté du temps en productio
 
 | Piège | Symptôme | Correctif inscrit |
 |---|---|---|
-| Débit de la voix française | `rate=RUSHED` malgré une durée correcte | 24-28 mots par ligne, pas 27-32 |
+| Débit de la voix française | prise hors fenêtre alors que `rate=ok` | deux prises par ligne, on garde la bonne |
+| Registre de langue | les deux prises ratent du même côté | phrase familière = lue vite, soutenue = lue lentement |
+| Publication TikTok | post PENDING puis `ERROR` silencieux | `privacyOption` obligatoire + relecture après création |
 | Élisions et sous-titres | burn refusé, similarité ~0,63 | max 1-2 apostrophes par ligne |
 | Action Metricool standard | « at least one provider » | utiliser `schedule_reel_with_providers` |
 | Recommandeur de preset vidéo | `submission_failed` sur les 4 blocs | `declined_preset_id` pré-appliqué |

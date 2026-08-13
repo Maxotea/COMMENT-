@@ -6,15 +6,15 @@
 
 ## Publiées / en file
 
-- [x] 001 — Comment on attrape une otite → CTA annonce : le hoquet (publié 12/08)
-- [x] 002 — Pourquoi tu as le hoquet → CTA annonce : les bâillements (publié 13/08)
-- [x] 003 — Pourquoi les bâillements sont contagieux → CTA annonce : les frissons (publié 14/08)
+- [!] 001 — Comment on attrape une otite → CTA annonce : le hoquet — **JAMAIS PUBLIÉE** (rejet TikTok « does not specified privacy options », voir plus bas)
+- [x] 002 — Pourquoi tu as le hoquet → CTA annonce : les bâillements (publié 12/08 18:00)
+- [x] 003 — Pourquoi les bâillements sont contagieux → CTA annonce : les frissons (publié 13/08 10:00)
+- [x] 004 — Pourquoi tu as des frissons → CTA annonce : le nez bouché (programmé 14/08 12:00, post 361594247)
+- [x] 005 — Pourquoi ton nez se bouche d'un seul côté → CTA annonce : les courbatures (programmé 15/08 12:00, post 361599410)
+- [x] 006 — Pourquoi les courbatures arrivent deux jours après → CTA annonce : les gargouillis (programmé 16/08 12:00, post 361608460)
 
 ## À produire (dans cet ordre)
 
-- [ ] 004 — **Pourquoi tu as des frissons** · angle : les muscles arrecteurs qui hérissent les poils, un chauffage d'urgence hérité d'une époque où on avait de la fourrure → CTA : le nez bouché d'un seul côté
-- [ ] 005 — **Pourquoi ton nez se bouche d'un seul côté** · angle : le cycle nasal, tes narines travaillent en alternance toutes les quelques heures → CTA : les courbatures
-- [ ] 006 — **Pourquoi les courbatures arrivent deux jours après** · angle : micro-déchirures et inflammation retardée, ce n'est pas l'acide lactique → CTA : les gargouillis du ventre
 - [ ] 007 — **Pourquoi ton ventre gargouille** · angle : le péristaltisme brasse de l'air même à vide, le bruit vient des gaz pas de la faim → CTA : les doigts fripés
 - [ ] 008 — **Pourquoi tes doigts se rident dans l'eau** · angle : ce n'est pas l'eau qui gonfle la peau, c'est ton système nerveux qui crée des rainures antidérapantes → CTA : l'éternuement face au soleil
 - [ ] 009 — **Pourquoi tu éternues en regardant le soleil** · angle : le réflexe photo-sternutatoire, un croisement de câbles entre nerf optique et nerf trijumeau, 1 personne sur 4 → CTA : le mal de tête de la glace
@@ -30,3 +30,19 @@
 Recharger avec des questions du même moule : un phénomène corporel quotidien, une cause
 contre-intuitive, et un fil rouge visuel possible (un organe, un tube, un muscle, une cellule).
 Éviter tout ce qui touche au diagnostic ou au conseil médical — la chaîne explique, elle ne soigne pas.
+
+## Le cas de la vidéo 001 (otite)
+
+Elle n'est jamais sortie : le post du 12/08 a été refusé par TikTok faute de `privacyOption`
+(cause et correctif dans `channel_dna.json` → `regle_publication_tiktok`). La vidéo elle-même est
+intacte et livrable.
+
+**Elle ne peut pas être republiée telle quelle** : son CTA parlé annonce « demain on t'explique
+pourquoi tu as le hoquet », or le hoquet est sorti le 12/08. La remettre en file casserait la chaîne.
+
+Deux options, au choix de Maxime :
+- **la republier quand même** en fin de file, en acceptant que son CTA renvoie à une vidéo déjà en ligne
+  (peu gênant pour un nouveau spectateur, qui trouvera le hoquet dans le profil) ;
+- **refaire son dernier bloc** (voix + vidéo, ~10 min de production) pour que le CTA annonce le sujet
+  suivant de la file. C'est l'option propre.
+

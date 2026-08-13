@@ -1,24 +1,51 @@
 # Pack de publication — chaîne ExpliqueMoi (TikTok · Reels · Shorts)
 
-> ✅ **PLANIFIÉ le 2026-08-11.** Marque Metricool « ExpliqueMoi » (blogId **6704763**),
-> compte TikTok @ExpliqueMoi connecté. Les deux vidéos sont en file d'attente TikTok,
-> publication automatique, 12:00 Europe/Paris — horaires vérifiés après création.
+> **État au 2026-08-13.** Compte TikTok **@expliquemoien40sec**, marque Metricool « ExpliqueMoi »
+> (blogId **6704763**, userId **3689627**). Publication automatique, 12:00 Europe/Paris.
 >
 > | Post | Date | Réseau | ID Metricool | Statut |
 > |---|---|---|---|---|
-> | Vidéo #1 — otite | 2026-08-12 12:00 | TikTok | 360947537 | PENDING, autoPublish |
-> | Vidéo #2 — hoquet | 2026-08-13 12:00 | TikTok | 360947612 | PENDING, autoPublish |
-> | Vidéo #3 — bâillements | 2026-08-14 12:00 | TikTok | 360968512 | PENDING, autoPublish |
+> | Vidéo #1 — otite | 2026-08-12 12:00 | TikTok | 360947537 | ❌ **ERROR — jamais publiée** |
+> | Vidéo #2 — hoquet | 2026-08-12 18:00 | TikTok | 361250005 | ✅ PUBLIÉE |
+> | Vidéo #3 — bâillements | 2026-08-13 10:00 | TikTok | 361250091 | ✅ PUBLIÉE |
+> | Vidéo #4 — frissons | 2026-08-14 12:00 | TikTok | 361594247 | PENDING, autoPublish |
+> | Vidéo #5 — nez bouché | 2026-08-15 12:00 | TikTok | 361599410 | PENDING, autoPublish |
+> | Vidéo #6 — courbatures | 2026-08-16 12:00 | TikTok | 361608460 | PENDING, autoPublish |
+>
+> Vidéos publiées :
+> [#2 hoquet](https://www.tiktok.com/@expliquemoien40sec/video/7673176927527652640) ·
+> [#3 bâillements](https://www.tiktok.com/@expliquemoien40sec/video/7673423975707413792)
 >
 > Bio, avatar et réglages du compte : `publication/bio-tiktok.md`.
->
-> **Note technique importante** : l'action Zapier standard `schedule_post` refuse les posts
-> (« You need to include at least one provider ») quel que soit le format des booléens.
-> Contournement en place : l'action `schedule_reel_with_providers` (créée pour ce compte),
-> qui envoie `providers: [{"network":"tiktok"}]` explicitement. C'est elle qu'il faut utiliser
-> pour les prochaines vidéos.
 
-## Vidéo #1 — Comment on attrape une otite
+## ⚠️ Le bug qui a coûté la vidéo #1 — corrigé
+
+Le post de la vidéo #1 a été **accepté par l'API Metricool** (statut PENDING, tout paraissait normal)
+puis **rejeté par TikTok** à l'heure de publication :
+
+```
+providers[0].status        = ERROR
+providers[0].detailedStatus = "Publish Tiktok video error: does not specified privacy options"
+```
+
+Cause : le payload ne contenait pas `tiktokData.privacyOption`. Les vidéos #2 et #3 ne sont sorties
+que parce qu'elles ont été recréées à la main dans l'interface Metricool, qui remplit ce champ.
+
+**Correctif appliqué le 13/08** : l'action Zapier `schedule_reel_with_providers` envoie désormais
+systématiquement `tiktokData: {privacyOption: "PUBLIC_TO_EVERYONE", photoCoverIndex: 0}`.
+Les posts #4, #5 et #6 ont été relus après création : le champ est bien stocké.
+
+**Réflexe à garder** : après chaque planification, relire le post avec `list_scheduled_posts` et
+vérifier que `tiktokData.privacyOption` est présent. Un post sans ce champ passera l'heure dite
+sans rien publier et sans alerte.
+
+## Note technique — action Zapier
+
+L'action standard `schedule_post` refuse les posts (« You need to include at least one provider »)
+quel que soit le format des booléens. Utiliser `schedule_reel_with_providers`, qui envoie
+`providers: [{"network":"tiktok"}]` explicitement **et** le bloc `tiktokData`.
+
+## Vidéo #1 — Comment on attrape une otite ❌ NON PUBLIÉE
 
 - **Fichier vidéo (URL publique, 1080×1920, 40 s)** :
   https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_113842_f31ff67a-95af-411b-b70d-7eca60e602ef.mp4
@@ -81,6 +108,51 @@ Ton chien bâille quand tu bâilles 🐶
 Le coupable : de minuscules neurones qui copient ce qu'ils voient. Et plus tu aimes la personne, plus tu attrapes son bâillement.
 👉 Abonne-toi — demain : les frissons.
 #baillement #corpshumain #cerveau #empathie #lesavaistu #apprendresurtiktok
+```
+
+## Vidéo #4 — Pourquoi tu as des frissons ✅ LIVRÉE
+
+- **Fichier vidéo (1080×1920, 40 s)** :
+  https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260813_081032_b9d189fb-a840-4cd5-a767-ee4bdbead584.mp4
+- **Poster** :
+  https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/9348ab84-8776-42dc-a383-954c082e3e2d.jpg
+- **Légende** :
+
+```
+Ta peau se hérisse sur une musique, alors que tu n'as pas froid 🎧
+Le coupable : un muscle minuscule planté au pied de chaque poil — un chauffage hérité de l'époque où on avait de la fourrure.
+👉 Abonne-toi — demain : pourquoi ton nez se bouche d'un seul côté.
+#frissons #chairdepoule #corpshumain #lesavaistu #apprendresurtiktok #science
+```
+
+## Vidéo #5 — Pourquoi ton nez se bouche d'un seul côté ✅ LIVRÉE
+
+- **Fichier vidéo (1080×1920, 40 s)** :
+  https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260813_082701_5a9cb4f6-fd28-4851-8de1-fa86e533f1ed.mp4
+- **Poster** :
+  https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/7df679fd-8704-4bef-b557-307d72b1dc35.jpg
+- **Légende** :
+
+```
+Ton nez n'est jamais bouché des deux côtés en même temps 🫢
+Tes narines se relèvent toutes les quelques heures : pendant que l'une bosse, l'autre se repose. Le rhume ne crée pas ce cycle, il le rend juste impossible à ignorer.
+👉 Abonne-toi — demain : pourquoi les courbatures arrivent deux jours après.
+#nezbouche #cyclenasal #corpshumain #lesavaistu #apprendresurtiktok #sante
+```
+
+## Vidéo #6 — Pourquoi les courbatures arrivent deux jours après ✅ LIVRÉE
+
+- **Fichier vidéo (1080×1920, 40 s)** :
+  https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260813_085327_7f19750c-8b31-4d5a-b5e2-ecc3bffa10e8.mp4
+- **Poster** :
+  https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/13875f2c-1d3d-46fb-a3e6-87c582e61d8c.jpg
+- **Légende** :
+
+```
+Non, ce ne sont pas les courbatures d'acide lactique 💪
+Il a disparu depuis deux heures. Ce qui te fait mal, c'est le chantier de réparation : des milliers de micro-déchirures que ton corps recoud pendant deux jours.
+👉 Abonne-toi — demain : pourquoi ton ventre gargouille.
+#courbatures #sport #corpshumain #lesavaistu #apprendresurtiktok #science
 ```
 
 ## Règles de chaîne (à reconduire chaque jour)
