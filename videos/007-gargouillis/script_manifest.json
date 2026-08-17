@@ -1,0 +1,101 @@
+{
+  "topic": "Pourquoi ton ventre gargouille",
+  "channel_type": "explainer",
+  "style": "Pastel Flat 2D",
+  "language": "fr",
+  "through_line": {
+    "name": "la bulle d'air coincee dans le tube",
+    "asset": "prop_bulle",
+    "progression": "invisible en bloc un (on entend le bruit, on ne voit que la gene du personnage) -> localisee en bloc deux (les anneaux mint poussent les bulles le long du tube vide) -> ecrasee en bloc trois (la bulle eclate et ses ondes resonnent dans le tube vide, puis meurent quand la nourriture arrive) -> comprise en bloc quatre (le badge rejoue l'eclatement, le personnage comprend et se detend)",
+    "resolution": "le bloc final rejoue l'eclatement de la bulle dans le badge au moment ou le personnage comprend : le bruit du hook ne venait pas de la faim mais d'une bulle ecrasee dans un tube que rien ne remplit"
+  },
+  "arc": {
+    "hook": 1,
+    "build": [
+      2
+    ],
+    "turn": 3,
+    "payoff": 4
+  },
+  "blocks": [
+    {
+      "n": 1,
+      "arc_role": "hook",
+      "vo_line": "Ton ventre gargouille en pleine réunion, et tout le monde croit que tu as faim. En réalité, ce bruit n'a presque rien à voir avec la faim.",
+      "location": "bureau",
+      "through_line_state": "invisible : on entend le gargouillis et on ne voit que la gene du personnage, le badge n'arrive qu'au dernier plan",
+      "shots": [
+        "WIDE static: the person sits at the sandy table in the quiet meeting room, hands folded on the table, listening politely",
+        "MEDIUM static: three small baby blue bubble shapes pop into the air beside the person and wobble, one after another, like floating sound symbols",
+        "MEDIUM static: the person freezes wide-eyed, cheeks going soft pink, and folds both arms tightly across the front of the sandy sweater",
+        "CLOSE-UP low angle static: framed on the head and shoulders, they glance sideways off-frame with an awkward tight-lipped smile, shoulders creeping up",
+        "MEDIUM static: the bubble badge swings in from the right and settles beside the person with a bounce, two sparkles popping"
+      ],
+      "assets_used": [
+        "loc_bureau",
+        "char_main",
+        "prop_bulle"
+      ]
+    },
+    {
+      "n": 2,
+      "arc_role": "build",
+      "vo_line": "Tes intestins se serrent en vagues pour pousser leur contenu, même à vide. Ce brassage remue surtout de l'air et un peu de liquide.",
+      "location": "intestin",
+      "through_line_state": "localisee : les anneaux mint se resserrent en vague et poussent les bulles bleues le long du tube vide",
+      "shots": [
+        "WIDE static: the pink tube at rest, the mint bands relaxed and evenly spaced, three baby blue bubbles drifting slowly inside",
+        "MEDIUM lateral gentle drift right: the first mint band tightens and squeezes the tube narrow, then relaxes as the next band tightens behind it, a wave travelling along",
+        "CLOSE-UP high angle static: the travelling squeeze pushes the bubbles forward down the tube, each bubble stretching as it is nudged along",
+        "EXTREME CLOSE-UP slow push-in: one bubble caught under a tightening mint band, flattening and wobbling under the pressure",
+        "MEDIUM low angle static: pulled back on the whole tube, the wave of squeezes runs its full length while the bubbles tumble ahead of it"
+      ],
+      "assets_used": [
+        "loc_intestin",
+        "prop_bulle"
+      ]
+    },
+    {
+      "n": 3,
+      "arc_role": "turn",
+      "vo_line": "Ce bruit vient des bulles qui passent dans un tube étroit, pas de ton estomac. Il est là après un repas aussi, masqué par la nourriture.",
+      "location": "intestin",
+      "through_line_state": "ecrasee : la bulle eclate et ses ondes traversent tout le tube vide ; des que les blocs sable remplissent le tube, le meme eclatement ne fait plus aucun bruit",
+      "shots": [
+        "EXTREME CLOSE-UP static: one baby blue bubble is crushed thin between the tube wall and a tightening mint band, and bursts into three tiny bubbles, sending soft concentric ripple rings outward through the empty tube",
+        "WIDE static: the ripple rings race down the whole empty tube and bounce back off the far bend, crossing each other",
+        "MEDIUM static: rounded sandy yellow lumps drift in from the left and fill the tube, packing in snugly around the remaining bubbles",
+        "CLOSE-UP high angle static: a mint band squeezes again, a bubble is crushed exactly as before, but the ripple rings die instantly against the packed sandy lumps",
+        "MEDIUM low angle static: the full tube keeps squeezing in silence, the sandy lumps absorbing every ripple"
+      ],
+      "assets_used": [
+        "loc_intestin",
+        "prop_bulle"
+      ]
+    },
+    {
+      "n": 4,
+      "arc_role": "payoff",
+      "vo_line": "À jeun, plus rien ne vient amortir ce vacarme, et il résonne dans tout ton abdomen : abonne-toi, demain on regarde tes doigts fripés dans le bain.",
+      "location": "bureau",
+      "through_line_state": "comprise : le badge rejoue l'eclatement dans un tube vide au moment exact ou le personnage comprend, et la gene du hook se transforme en amusement",
+      "shots": [
+        "CLOSE-UP static: the person still at the table, hands on their stomach, eyebrows lifting as a soft rumble passes through them",
+        "EXTREME CLOSE-UP static on the badge: inside the little tube the lone bubble pops and wide ripple rings spread out unchecked through the empty space",
+        "MEDIUM high angle static: the person's face clears as they understand, and they give a small amused headshake",
+        "MEDIUM static: they pat their own stomach twice with an open palm and grin openly at the camera, relaxed now",
+        "CLOSE-UP low angle static: the person points at the viewer, a rounded sandy yellow bell shape pops in beside them and rings with two sparkles, and they wink"
+      ],
+      "assets_used": [
+        "loc_bureau",
+        "char_main",
+        "prop_bulle"
+      ]
+    }
+  ],
+  "sources": [
+    "https://www.ncbi.nlm.nih.gov/books/NBK553133/",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6140167/",
+    "https://pubmed.ncbi.nlm.nih.gov/2185580/"
+  ]
+}

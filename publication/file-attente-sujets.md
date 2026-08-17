@@ -9,13 +9,13 @@
 - [!] 001 — Comment on attrape une otite → CTA annonce : le hoquet — **JAMAIS PUBLIÉE** (rejet TikTok « does not specified privacy options », voir plus bas)
 - [x] 002 — Pourquoi tu as le hoquet → CTA annonce : les bâillements (publié 12/08 18:00)
 - [x] 003 — Pourquoi les bâillements sont contagieux → CTA annonce : les frissons (publié 13/08 10:00)
-- [x] 004 — Pourquoi tu as des frissons → CTA annonce : le nez bouché (programmé 14/08 12:00, post 361594247)
-- [x] 005 — Pourquoi ton nez se bouche d'un seul côté → CTA annonce : les courbatures (programmé 15/08 12:00, post 361599410)
-- [x] 006 — Pourquoi les courbatures arrivent deux jours après → CTA annonce : les gargouillis (programmé 16/08 12:00, post 361608460)
+- [x] 004 — Pourquoi tu as des frissons → CTA annonce : le nez bouché (publié 14/08 12:00)
+- [x] 005 — Pourquoi ton nez se bouche d'un seul côté → CTA annonce : les courbatures (publié 15/08 12:00)
+- [x] 006 — Pourquoi les courbatures arrivent deux jours après → CTA annonce : les gargouillis (publié 16/08 12:00)
+- [x] 007 — Pourquoi ton ventre gargouille → CTA annonce : les doigts fripés (programmé 17/08 21:00, post 363188030)
 
 ## À produire (dans cet ordre)
 
-- [ ] 007 — **Pourquoi ton ventre gargouille** · angle : le péristaltisme brasse de l'air même à vide, le bruit vient des gaz pas de la faim → CTA : les doigts fripés
 - [ ] 008 — **Pourquoi tes doigts se rident dans l'eau** · angle : ce n'est pas l'eau qui gonfle la peau, c'est ton système nerveux qui crée des rainures antidérapantes → CTA : l'éternuement face au soleil
 - [ ] 009 — **Pourquoi tu éternues en regardant le soleil** · angle : le réflexe photo-sternutatoire, un croisement de câbles entre nerf optique et nerf trijumeau, 1 personne sur 4 → CTA : le mal de tête de la glace
 - [ ] 010 — **Pourquoi la glace te donne mal à la tête** · angle : le palais refroidi contracte puis dilate une artère, et le cerveau se trompe sur l'origine de la douleur → CTA : le rougissement

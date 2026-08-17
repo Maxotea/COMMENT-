@@ -1,6 +1,8 @@
 # Pack de publication — chaîne ExpliqueMoi (TikTok · Reels · Shorts)
 
-> **État au 2026-08-13.** Compte TikTok **@expliquemoien40sec**, marque Metricool « ExpliqueMoi »
+> **État au 2026-08-17.** Le correctif `privacyOption` est validé sur le terrain : les vidéos #4, #5 et #6 sont toutes sorties automatiquement, sans intervention manuelle.
+>
+> **État initial au 2026-08-13.** Compte TikTok **@expliquemoien40sec**, marque Metricool « ExpliqueMoi »
 > (blogId **6704763**, userId **3689627**). Publication automatique, 12:00 Europe/Paris.
 >
 > | Post | Date | Réseau | ID Metricool | Statut |
@@ -8,13 +10,17 @@
 > | Vidéo #1 — otite | 2026-08-12 12:00 | TikTok | 360947537 | ❌ **ERROR — jamais publiée** |
 > | Vidéo #2 — hoquet | 2026-08-12 18:00 | TikTok | 361250005 | ✅ PUBLIÉE |
 > | Vidéo #3 — bâillements | 2026-08-13 10:00 | TikTok | 361250091 | ✅ PUBLIÉE |
-> | Vidéo #4 — frissons | 2026-08-14 12:00 | TikTok | 361594247 | PENDING, autoPublish |
-> | Vidéo #5 — nez bouché | 2026-08-15 12:00 | TikTok | 361599410 | PENDING, autoPublish |
-> | Vidéo #6 — courbatures | 2026-08-16 12:00 | TikTok | 361608460 | PENDING, autoPublish |
+> | Vidéo #4 — frissons | 2026-08-14 12:00 | TikTok | 361610915 | ✅ PUBLIÉE |
+> | Vidéo #5 — nez bouché | 2026-08-15 12:00 | TikTok | 361610981 | ✅ PUBLIÉE |
+> | Vidéo #6 — courbatures | 2026-08-16 12:00 | TikTok | 361608460 | ✅ PUBLIÉE |
+> | Vidéo #7 — gargouillis | 2026-08-17 21:00 | TikTok | 363188030 | PENDING, autoPublish |
 >
 > Vidéos publiées :
 > [#2 hoquet](https://www.tiktok.com/@expliquemoien40sec/video/7673176927527652640) ·
-> [#3 bâillements](https://www.tiktok.com/@expliquemoien40sec/video/7673423975707413792)
+> [#3 bâillements](https://www.tiktok.com/@expliquemoien40sec/video/7673423975707413792) ·
+> [#4 frissons](https://www.tiktok.com/@expliquemoien40sec/video/7673825642026175777) ·
+> [#5 nez bouché](https://www.tiktok.com/@expliquemoien40sec/video/7674196601761516833) ·
+> [#6 courbatures](https://www.tiktok.com/@expliquemoien40sec/video/7674567610926648608)
 >
 > Bio, avatar et réglages du compte : `publication/bio-tiktok.md`.
 
@@ -153,6 +159,21 @@ Non, ce ne sont pas les courbatures d'acide lactique 💪
 Il a disparu depuis deux heures. Ce qui te fait mal, c'est le chantier de réparation : des milliers de micro-déchirures que ton corps recoud pendant deux jours.
 👉 Abonne-toi — demain : pourquoi ton ventre gargouille.
 #courbatures #sport #corpshumain #lesavaistu #apprendresurtiktok #science
+```
+
+## Vidéo #7 — Pourquoi ton ventre gargouille ✅ LIVRÉE
+
+- **Fichier vidéo (1080×1920, 40 s)** :
+  https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260817_172831_6029978b-bf66-4d16-8657-468f0fb502f6.mp4
+- **Poster** :
+  https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/b493ef37-ac7c-4bc4-89c9-92ff704d03fc.jpg
+- **Légende** :
+
+```
+Ton ventre gargouille, et tout le monde croit que tu as faim 🫠
+En fait ça n'a presque rien à voir : c'est une bulle d'air écrasée dans un tube étroit. Le bruit existe aussi après manger, sauf qu'à ce moment-là la nourriture l'étouffe.
+👉 Abonne-toi — demain : pourquoi tes doigts se rident dans l'eau.
+#gargouillis #digestion #corpshumain #lesavaistu #apprendresurtiktok #science
 ```
 
 ## Règles de chaîne (à reconduire chaque jour)

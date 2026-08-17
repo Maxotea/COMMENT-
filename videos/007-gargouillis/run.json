@@ -1,0 +1,54 @@
+{
+  "video": "007 — Pourquoi ton ventre gargouille",
+  "date": "2026-08-17",
+  "workflow": "faceless-channel-video v2.1 (reprise CHANNEL DNA)",
+  "intake_lock": "Type: Explainer [DNA] · Mode: animé [DNA] · Style: Pastel Flat 2D [DNA, clé réutilisée] · 40s → 4 blocs · 9:16 [DNA] · Sous-titres: clean FR [DNA] · Voix: Ainsley [DNA] · Sujet: les gargouillis [CTA de la vidéo 6]",
+  "style_key_job_id": "6f332671-7f68-40bd-abd1-e7bf6cba2656",
+  "assets": {
+    "char_main": {"job_id": "9decbeed-3925-4730-99bd-bfbd2add6a5b", "note": "réutilisé depuis la vidéo 001"},
+    "loc_bureau": {"job_id": "12895eab-7ea2-4395-9d0d-566f69f7f426", "note": "nouveau — petite salle de réunion, table sable, chaises lavande"},
+    "loc_intestin": {"job_id": "69418c13-f365-4b85-b36c-9df757965119", "note": "nouveau — coupe d'intestin, anneaux mint le long du tube, bulles bleues"},
+    "prop_bulle": {"job_id": "0c84a582-9775-4562-b926-c8fc4bb96fb8", "note": "nouveau — badge fil rouge : segment de tube avec une bulle coincée"}
+  },
+  "blocks_jobs": {
+    "1": "1e8c8f70-876e-4262-9b35-681efd220f54",
+    "2": "c6b0b0d7-4694-4527-a1fa-2b86e61a9897",
+    "3": "e197a49a-4d15-43d1-9301-5a435cffb49f",
+    "4": "dea5e6f5-d723-43b4-bb71-c833e1589e27"
+  },
+  "voice_jobs": {
+    "1": {"job_id": "bf5350a1-199c-4d8a-874b-c708714506f0", "speech_s": 9.056, "words": 27, "wps": 2.98, "attempt": "paire 1, prise B"},
+    "2": {"job_id": "f75d83a1-f63a-41c9-9a79-4878fc194f46", "speech_s": 9.245, "words": 24, "wps": 2.60, "attempt": "3e formulation — voir incident_ils_repete"},
+    "3": {"job_id": "7e773b78-3472-440d-bc80-c2b97296aa4d", "speech_s": 8.649, "words": 26, "wps": 3.01, "attempt": "paire 2, prise B (la paire 1 à 26 mots donnait 10.16s et 10.65s, registre allégé)"},
+    "4": {"job_id": "48452b27-11b7-4c78-94be-4f8c4722da14", "speech_s": 9.168, "words": 26, "wps": 2.84, "attempt": "paire 1, prise B"}
+  },
+  "music_bed_job": {"job_id": "f4cb68ad-4bfc-4ba5-9d69-bd5d9c990869", "model": "sonilo_music"},
+  "incident_nsfw_bloc_1": {
+    "symptome": "le bloc 1 est revenu en statut `nsfw` alors que les 3 autres passaient. Scène anodine : une personne habillée assise à une table de réunion.",
+    "cause_probable": "les mots `belly area`, `over the sweater` et `presses both hands flat against their stomach` dans les descriptions de plans. Même famille de faux positifs que le thorax de la vidéo 002.",
+    "correctif": "reformulation sans nommer le ventre — les bulles deviennent des symboles sonores flottant À CÔTÉ du personnage, et les mains se croisent `across the front of the sandy sweater`. Ajout au NEGATIVE de `bare skin, exposed midriff, lifted or removed clothing` et mention explicite que le personnage reste habillé et cadré épaules-tête. Accepté immédiatement.",
+    "regle": "déjà couverte par regle_moderation_anatomie ; cette occurrence confirme que le déclencheur est le NOM de la partie du corps, pas ce qui est montré."
+  },
+  "incident_ils_repete": {
+    "symptome": "validate_motion_script refuse le bloc 2 : `vo_line repeats \"ils\" within 6 words`.",
+    "cause": "« …même quand ils sont vides. Ils brassent alors surtout de l'air » — deux `ils` à 2 mots d'intervalle.",
+    "correctif": "« Ce brassage remue… » à la place du second `ils`. Mais la reformulation à 28 mots en registre soutenu est sortie à 11.09s et 10.80s : trop longue des deux côtés. Application de la règle de registre — version allégée et raccourcie à 24 mots (`se serrent` au lieu de `se contractent`, `même à vide` au lieu de `même quand ils sont vides`) → 8.68s et 9.25s, la seconde retenue.",
+    "lecon": "corriger une contrainte du validateur change la longueur ET le registre de la ligne : il faut re-mesurer, jamais supposer que la nouvelle version tient dans la même fenêtre."
+  },
+  "validators": {
+    "validate_motion_script": {"valid": true},
+    "gate7": "27 cues, similarités par bloc 0.89 / 0.78 / 0.96 / 0.78, burn accepté du premier coup",
+    "gate8": "master 720×1280, audio 40.055s, puis Topaz 1080p"
+  },
+  "delivery": {
+    "master_720_media_id": "e391cf95-780c-490d-88b9-1a084812c2e2",
+    "master_720_url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/e391cf95-780c-490d-88b9-1a084812c2e2.mp4",
+    "upscale_job_id": "6029978b-bf66-4d16-8657-468f0fb502f6",
+    "upscaled": "topaz-1080p",
+    "final_1080_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260817_172831_6029978b-bf66-4d16-8657-468f0fb502f6.mp4",
+    "poster_media_id": "b493ef37-ac7c-4bc4-89c9-92ff704d03fc",
+    "poster_url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/b493ef37-ac7c-4bc4-89c9-92ff704d03fc.jpg",
+    "metricool_post_id": 363188030,
+    "publication": "TikTok @expliquemoien40sec — 2026-08-17 21:00 Europe/Paris, autoPublish, privacyOption vérifié"
+  }
+}

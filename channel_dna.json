@@ -7,7 +7,9 @@
     "name": "Pastel Flat 2D",
     "preset_id": "d0708b4f-a134-40f7-9884-9ad830904e71",
     "style_key_job_id": "6f332671-7f68-40bd-abd1-e7bf6cba2656",
-    "style_key_urls": ["https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104429_6f332671-7f68-40bd-abd1-e7bf6cba2656.png"],
+    "style_key_urls": [
+      "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104429_6f332671-7f68-40bd-abd1-e7bf6cba2656.png"
+    ],
     "formula_file": "references/kids-styles.md §2 Pastel Flat 2D",
     "palette_lock": "pastel palette of the reference images (pink / baby blue / mint / sandy yellow / lavender) — no new colors, outlines darker-shade never black",
     "motion": "simple limited animation on twos, soft bouncy easing; KEEP '3D render' in NEGATIVE",
@@ -31,7 +33,8 @@
       "soutenu_donc_lent": "Une phrase à vocabulaire polysyllabique (« sans ressentir la moindre difficulté », « deviendra une véritable épreuve ») déclenche une diction lente et posée : 1.9 à 2.3 mots/s.",
       "regle": "Ligne trop courte → remplacer un ou deux mots familiers par des tournures plus soutenues. Ligne trop longue → faire l'inverse. Viser un registre MIXTE : une ou deux tournures soutenues dans une phrase par ailleurs simple.",
       "constate_le": "2026-08-13, vidéo 006 : 10 prises sur la ligne 1 avant de comprendre. L'écart de débit sur une même voix va de 1.88 à 4.08 mots/s, soit plus du double."
-    }
+    },
+    "corollaire_reecriture": "Toute correction de wording — y compris imposée par validate_motion_script — change le registre ET la longueur de la ligne, donc son débit. Ne jamais supposer que la version corrigée tient dans la même fenêtre : re-soumettre deux prises et re-mesurer. Constaté 2026-08-17 vidéo 007 : la correction d'un « ils » répété a fait passer la ligne de 9.04s à 11.09s."
   },
   "regle_detection_coupes": {
     "probleme": "La vérification du nombre de plans par bloc doit lire le champ ffprobe `pts_time`. Les ffmpeg récents ont supprimé `pkt_pts_time` : la commande ne renvoie alors AUCUNE erreur, juste une liste vide.",
@@ -55,13 +58,52 @@
   "subtitles": "on — look clean, --language fr",
   "language": "fr",
   "assets": [
-    {"name": "char_main", "kind": "character", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104742_9decbeed-3925-4730-99bd-bfbd2add6a5b.png"},
-    {"name": "char_bacteria", "kind": "character", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104742_b8e37f6b-58bc-49f1-8f0c-fc206f7a89af.png"},
-    {"name": "loc_pool", "kind": "location", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104742_0df94c94-e8d1-4265-99f7-e69acf96ecd3.png"},
-    {"name": "loc_ear", "kind": "location", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104742_bd3dce53-0bd1-4740-8c7b-09981ce12746.png"},
-    {"name": "loc_ear_macro", "kind": "location", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_105146_a27e86d9-cc45-4877-87aa-15697304ec7f.png"},
-    {"name": "loc_diagram", "kind": "location", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104845_657f6aee-6a5f-4597-b884-723c129eadc2.png"},
-    {"name": "prop_tube", "kind": "prop", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104742_c5c1011a-28b2-460b-b7ea-cab609ffaeb9.png"},
-    {"name": "prop_tissue", "kind": "prop", "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_105023_27e22174-f92b-44db-9c83-8c6041e3f25d.png"}
-  ]
+    {
+      "name": "char_main",
+      "kind": "character",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104742_9decbeed-3925-4730-99bd-bfbd2add6a5b.png"
+    },
+    {
+      "name": "char_bacteria",
+      "kind": "character",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104742_b8e37f6b-58bc-49f1-8f0c-fc206f7a89af.png"
+    },
+    {
+      "name": "loc_pool",
+      "kind": "location",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104742_0df94c94-e8d1-4265-99f7-e69acf96ecd3.png"
+    },
+    {
+      "name": "loc_ear",
+      "kind": "location",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104742_bd3dce53-0bd1-4740-8c7b-09981ce12746.png"
+    },
+    {
+      "name": "loc_ear_macro",
+      "kind": "location",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_105146_a27e86d9-cc45-4877-87aa-15697304ec7f.png"
+    },
+    {
+      "name": "loc_diagram",
+      "kind": "location",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104845_657f6aee-6a5f-4597-b884-723c129eadc2.png"
+    },
+    {
+      "name": "prop_tube",
+      "kind": "prop",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_104742_c5c1011a-28b2-460b-b7ea-cab609ffaeb9.png"
+    },
+    {
+      "name": "prop_tissue",
+      "kind": "prop",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260810_105023_27e22174-f92b-44db-9c83-8c6041e3f25d.png"
+    }
+  ],
+  "regle_moderation_anatomie": {
+    "probleme": "Le filtre nsfw se déclenche sur le NOM d'une partie du corps dans le prompt, indépendamment de ce qui est réellement montré. Une personne habillée assise à une table a été refusée, pendant qu'une coupe d'intestin passait sans problème.",
+    "symptome": "un seul bloc revient en statut `nsfw` alors que les autres, souvent plus anatomiques, passent.",
+    "mots_declencheurs_constates": "chest, belly, belly area, stomach, midriff, dome muscle",
+    "regle": "ne jamais nommer la zone : décrire le VÊTEMENT ou l'action à la place (« across the front of the sweater » plutôt que « against their stomach »), déplacer l'effet à CÔTÉ du personnage quand c'est possible, et ajouter au NEGATIVE « bare skin, exposed midriff, lifted or removed clothing » plus une mention explicite que le personnage reste habillé.",
+    "constate_le": "2026-08-11 vidéo 002 (thorax) ; reconfirmé 2026-08-17 vidéo 007 (bloc 1)."
+  }
 }
