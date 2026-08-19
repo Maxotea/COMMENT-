@@ -110,5 +110,12 @@
     "mots_declencheurs_constates": "chest, belly, belly area, stomach, midriff, dome muscle",
     "regle": "ne jamais nommer la zone : décrire le VÊTEMENT ou l'action à la place (« across the front of the sweater » plutôt que « against their stomach »), déplacer l'effet à CÔTÉ du personnage quand c'est possible, et ajouter au NEGATIVE « bare skin, exposed midriff, lifted or removed clothing » plus une mention explicite que le personnage reste habillé.",
     "constate_le": "2026-08-11 vidéo 002 (thorax) ; reconfirmé 2026-08-17 vidéo 007 (bloc 1)."
+  },
+  "regle_swap_media_metricool": {
+    "probleme": "L'action swap_post_media_verified ne remplace pas le media d'un post : elle en CREE UN NOUVEAU au meme creneau, tout en rapportant outcome=unchanged. Le post d'origine reste en place.",
+    "symptome": "retour trompeur : summary {changed:0, unchanged:1}, PUT status 200, old_media == new_media. Rien n'indique qu'un second post existe. Resultat reel : deux posts PENDING au meme horaire, meme texte, meme uuid — la video sortirait deux fois.",
+    "regle": "Apres tout swap de media, relire IMPERATIVEMENT list_scheduled_posts sur la journee visee et compter les posts. S'il y en a deux, verifier lequel porte la bonne version (telecharger et mesurer a l'ffprobe, ne pas se fier a l'URL) puis supprimer l'autre avec delete_post. Ne jamais se fier au champ outcome de l'action.",
+    "alternative_plus_sure": "si l'upscale n'est pas pret a l'heure de la planification, mieux vaut attendre et planifier une seule fois avec la version finale que de planifier en 720p puis tenter un swap.",
+    "constate_le": "2026-08-19, video 008."
   }
 }

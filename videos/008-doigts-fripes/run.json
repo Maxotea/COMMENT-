@@ -5,10 +5,22 @@
   "contexte": "Episode rattrape a la main : la routine quotidienne a bien tire le 18/08 a 06:04 mais n'a rien produit, faute de connecteurs MCP. La chaine des CTA a donc glisse d'un jour.",
   "style_key_job_id": "6f332671-7f68-40bd-abd1-e7bf6cba2656",
   "assets": {
-    "char_main": {"job_id": "9decbeed-3925-4730-99bd-bfbd2add6a5b", "note": "réutilisé depuis la vidéo 001"},
-    "loc_bain": {"job_id": "5b755988-653f-42a1-8371-2f721add3fda", "note": "nouveau — salle de bain, baignoire lavande"},
-    "loc_doigt": {"job_id": "a1b422b0-e8f7-423b-81cf-23204149ab8d", "note": "nouveau — coupe de pulpe de doigt, vaisseaux lavande + nerf mint"},
-    "prop_sillon": {"job_id": "02da5cea-d2e0-4eae-a05e-ecf077106993", "note": "nouveau — badge fil rouge : pulpe avec trois sillons + goutte"}
+    "char_main": {
+      "job_id": "9decbeed-3925-4730-99bd-bfbd2add6a5b",
+      "note": "réutilisé depuis la vidéo 001"
+    },
+    "loc_bain": {
+      "job_id": "5b755988-653f-42a1-8371-2f721add3fda",
+      "note": "nouveau — salle de bain, baignoire lavande"
+    },
+    "loc_doigt": {
+      "job_id": "a1b422b0-e8f7-423b-81cf-23204149ab8d",
+      "note": "nouveau — coupe de pulpe de doigt, vaisseaux lavande + nerf mint"
+    },
+    "prop_sillon": {
+      "job_id": "02da5cea-d2e0-4eae-a05e-ecf077106993",
+      "note": "nouveau — badge fil rouge : pulpe avec trois sillons + goutte"
+    }
   },
   "blocks_jobs": {
     "1": "733a8e19-ff98-4482-8c16-807ac2136363",
@@ -17,12 +29,39 @@
     "4": "118ea77b-dc9c-42f5-912d-a34f1c538108"
   },
   "voice_jobs": {
-    "1": {"job_id": "32027199-703f-426a-b46c-e26941240882", "speech_s": 8.777, "words": 25, "wps": 2.85, "attempt": "13 prises, 5 formulations — voir incident_ligne_1"},
-    "2": {"job_id": "f3e5d9bd-4357-45f3-a101-b36e72d64381", "speech_s": 8.753, "words": 26, "wps": 2.97, "attempt": "paire 1, prise B"},
-    "3": {"job_id": "5ef4e0c4-16f4-44f1-913c-8d2d92e2dce5", "speech_s": 9.5, "words": 25, "wps": 2.63, "attempt": "paire 1, prise B"},
-    "4": {"job_id": "5fc3af6e-417b-44b4-967c-f07a0da8c68a", "speech_s": 9.759, "words": 25, "wps": 2.56, "attempt": "paire 1, prise A ; la version allegee testee ensuite est repartie en RUSHED (7.70s), l'originale a ete conservee"}
+    "1": {
+      "job_id": "32027199-703f-426a-b46c-e26941240882",
+      "speech_s": 8.777,
+      "words": 25,
+      "wps": 2.85,
+      "attempt": "13 prises, 5 formulations — voir incident_ligne_1"
+    },
+    "2": {
+      "job_id": "f3e5d9bd-4357-45f3-a101-b36e72d64381",
+      "speech_s": 8.753,
+      "words": 26,
+      "wps": 2.97,
+      "attempt": "paire 1, prise B"
+    },
+    "3": {
+      "job_id": "5ef4e0c4-16f4-44f1-913c-8d2d92e2dce5",
+      "speech_s": 9.5,
+      "words": 25,
+      "wps": 2.63,
+      "attempt": "paire 1, prise B"
+    },
+    "4": {
+      "job_id": "5fc3af6e-417b-44b4-967c-f07a0da8c68a",
+      "speech_s": 9.759,
+      "words": 25,
+      "wps": 2.56,
+      "attempt": "paire 1, prise A ; la version allegee testee ensuite est repartie en RUSHED (7.70s), l'originale a ete conservee"
+    }
   },
-  "music_bed_job": {"job_id": "d7dec1bc-a074-456b-b036-c54b8037f846", "model": "sonilo_music"},
+  "music_bed_job": {
+    "job_id": "d7dec1bc-a074-456b-b036-c54b8037f846",
+    "model": "sonilo_music"
+  },
   "incident_ligne_1": {
     "symptome": "13 prises et 5 formulations avant de tomber dans la fenetre. La ligne oscillait d'un extreme a l'autre sans jamais s'y poser.",
     "mesures": "v1 familier 27 mots : 6.43s et 7.17s (RUSHED) · v2 soutenu 24 mots : 10.35 / 10.29 / 10.18s · v3 intermediaire 25 mots avec apposition : 10.80 / 10.43 / 8.88s (mais 1 pause de 0.92s) · v4 phrase simplifiee 24 mots : 6.82 / 8.08 / 8.12s · v5 simplifiee + 2 mots polysyllabiques 25 mots : 9.45 / 8.78 / 9.45s",
@@ -31,7 +70,9 @@
     "regle_ajoutee": "channel_dna.json → regle_debit_voix_fr.structure"
   },
   "validators": {
-    "validate_motion_script": {"valid": true},
+    "validate_motion_script": {
+      "valid": true
+    },
     "gate4": "4 blocs 10.006s, 720×1280, 24fps ; coupes 4/3/3/4",
     "gate7": "27 cues, similarités par bloc 0.89 / 0.85 / 0.81 / 0.91, burn accepté du premier coup",
     "gate8": "master 720×1280, audio 40.055s, puis Topaz 1080p"
@@ -40,6 +81,18 @@
     "master_720_media_id": "df9ba7ef-9667-42f3-892b-c70d1fcf5a29",
     "master_720_url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/df9ba7ef-9667-42f3-892b-c70d1fcf5a29.mp4",
     "upscale_job_id": "927c095b-cb89-4d50-8aa5-36cbaf597733",
-    "upscaled": "topaz-1080p"
+    "upscaled": "topaz-1080p",
+    "final_1080_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260819_052302_927c095b-cb89-4d50-8aa5-36cbaf597733.mp4",
+    "metricool_post_id": 363865699,
+    "publication": "TikTok @expliquemoien40sec — 2026-08-19 12:00 Europe/Paris, autoPublish, 1080p, privacyOption vérifié"
+  },
+  "incident_swap_media": {
+    "contexte": "L'upscaler Topaz etait engorge a l'heure de la livraison. Le post a d'abord ete cree avec le master 720p (id 363844221), puis le 1080p est arrive 1h30 plus tard.",
+    "symptome": "L'action code_action_metricoolcliapi__swap_post_media_verified a renvoye outcome=unchanged (PUT status 200, old_media == new_media). En apparence, un echec sans effet.",
+    "realite": "Elle avait en fait CREE UN SECOND POST (id 363865699) au meme creneau, portant bien le 1080p. Deux posts PENDING a 12:00, meme texte, meme uuid : la video serait sortie DEUX FOIS.",
+    "detection": "list_scheduled_posts apres l'operation — c'est la relecture systematique qui a revele le doublon, le retour de l'action ne le mentionnait pas.",
+    "verification": "les deux medias ont ete telecharges et mesures a l'ffprobe : 363844221 = 720x1280 (7.9 Mo), 363865699 = 1080x1920 (47 Mo). Le doublon portait donc la bonne version.",
+    "correctif": "suppression du post 720p (363844221) via delete_post, conservation du 1080p (363865699). Relecture finale : un seul post, 1080p, privacyOption present.",
+    "regle_ajoutee": "channel_dna.json → regle_swap_media_metricool"
   }
 }

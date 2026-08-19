@@ -6,6 +6,15 @@
 > faute de connecteurs MCP (voir `publication/routine-quotidienne.md`). La chaîne des CTA a donc glissé d'un jour :
 > la vidéo 007, sortie le 17/08, annonçait « demain ».
 
+## Livrables (hébergés Higgsfield)
+
+| Fichier | URL |
+|---|---|
+| **Vidéo finale 1080×1920** | https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260819_052302_927c095b-cb89-4d50-8aa5-36cbaf597733.mp4 |
+| Master 720p sous-titré (backup) | https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/df9ba7ef-9667-42f3-892b-c70d1fcf5a29.mp4 |
+
+**Publication** : TikTok @expliquemoien40sec, mercredi 19/08 à 12:00 (post Metricool 363865699, 1080p).
+
 ## Script final (tel que dit à l'antenne)
 
 1. **HOOK** — Après un long bain, tes doigts se couvrent de petits plis. On croit généralement que la peau absorbe l'eau et gonfle, mais c'est entièrement faux.
@@ -48,3 +57,19 @@ La méthode qui a fini par marcher : partir d'une phrase **simple**, sans incise
 puis régler la durée en échangeant deux mots courants contre deux mots polysyllabiques
 (« croit » → « croit généralement », « faux » → « entièrement faux »). Le registre devient un réglage fin
 sur une structure déjà saine, au lieu d'un pansement sur une phrase mal bâtie.
+
+
+## Second incident : le swap de média crée un doublon
+
+L'upscaler Topaz étant engorgé à l'heure de la livraison, le post a d'abord été créé avec le master 720p,
+puis le 1080p est arrivé 1 h 30 plus tard. L'action `swap_post_media_verified` a renvoyé
+`outcome=unchanged` — apparemment un échec sans effet.
+
+En réalité elle avait **créé un second post** au même créneau, portant le bon 1080p. Deux posts PENDING
+à 12:00, même texte, même uuid : **la vidéo serait sortie deux fois.**
+
+C'est la relecture systématique avec `list_scheduled_posts` qui l'a révélé — le retour de l'action ne le
+mentionnait nulle part. Les deux médias ont été téléchargés et mesurés à l'ffprobe pour trancher
+(720×1280 / 7,9 Mo contre 1080×1920 / 47 Mo, on ne peut pas se fier à l'URL), puis le post 720p a été
+supprimé. Règle ajoutée à la DNA : **ne jamais se fier au champ `outcome`, toujours recompter les posts
+après un swap.**
