@@ -34,7 +34,12 @@
       "regle": "Ligne trop courte → remplacer un ou deux mots familiers par des tournures plus soutenues. Ligne trop longue → faire l'inverse. Viser un registre MIXTE : une ou deux tournures soutenues dans une phrase par ailleurs simple.",
       "constate_le": "2026-08-13, vidéo 006 : 10 prises sur la ligne 1 avant de comprendre. L'écart de débit sur une même voix va de 1.88 à 4.08 mots/s, soit plus du double."
     },
-    "corollaire_reecriture": "Toute correction de wording — y compris imposée par validate_motion_script — change le registre ET la longueur de la ligne, donc son débit. Ne jamais supposer que la version corrigée tient dans la même fenêtre : re-soumettre deux prises et re-mesurer. Constaté 2026-08-17 vidéo 007 : la correction d'un « ils » répété a fait passer la ligne de 9.04s à 11.09s."
+    "corollaire_reecriture": "Toute correction de wording — y compris imposée par validate_motion_script — change le registre ET la longueur de la ligne, donc son débit. Ne jamais supposer que la version corrigée tient dans la même fenêtre : re-soumettre deux prises et re-mesurer. Constaté 2026-08-17 vidéo 007 : la correction d'un « ils » répété a fait passer la ligne de 9.04s à 11.09s.",
+    "structure": {
+      "principe": "Avant de regler le registre, regler la STRUCTURE. Une phrase a incise ou apposition (« L'explication habituelle, celle de la peau qui absorbe l'eau, est fausse ») invite le modele a respirer au milieu : pause interne de 0,9 s, au-dessus du seuil de 0,8 s. Deux propositions simples se lisent sans respiration parasite.",
+      "methode": "1) ecrire la ligne en deux propositions simples, sans incise ; 2) mesurer ; 3) regler la duree en echangeant deux mots courants contre deux mots polysyllabiques (ou l'inverse). Le registre est un reglage fin sur une structure deja saine, pas un substitut a une phrase mal batie.",
+      "constate_le": "2026-08-19, video 008 : 13 prises et 5 formulations sur la ligne 1. La version a apposition tombait a 8,88 s mais avec une pause de 0,92 s ; la meme idee en deux propositions simples plus deux mots polysyllabiques a donne 8,78 s sans aucune pause."
+    }
   },
   "regle_detection_coupes": {
     "probleme": "La vérification du nombre de plans par bloc doit lire le champ ffprobe `pts_time`. Les ffmpeg récents ont supprimé `pkt_pts_time` : la commande ne renvoie alors AUCUNE erreur, juste une liste vide.",

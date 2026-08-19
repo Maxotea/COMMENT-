@@ -13,14 +13,16 @@
 > | Vidéo #4 — frissons | 2026-08-14 12:00 | TikTok | 361610915 | ✅ PUBLIÉE |
 > | Vidéo #5 — nez bouché | 2026-08-15 12:00 | TikTok | 361610981 | ✅ PUBLIÉE |
 > | Vidéo #6 — courbatures | 2026-08-16 12:00 | TikTok | 361608460 | ✅ PUBLIÉE |
-> | Vidéo #7 — gargouillis | 2026-08-17 21:00 | TikTok | 363188030 | PENDING, autoPublish |
+> | Vidéo #7 — gargouillis | 2026-08-17 21:00 | TikTok | 363188030 | ✅ PUBLIÉE |
+> | Vidéo #8 — doigts fripés | 2026-08-19 12:00 | TikTok | 363844221 | PENDING, autoPublish |
 >
 > Vidéos publiées :
 > [#2 hoquet](https://www.tiktok.com/@expliquemoien40sec/video/7673176927527652640) ·
 > [#3 bâillements](https://www.tiktok.com/@expliquemoien40sec/video/7673423975707413792) ·
 > [#4 frissons](https://www.tiktok.com/@expliquemoien40sec/video/7673825642026175777) ·
 > [#5 nez bouché](https://www.tiktok.com/@expliquemoien40sec/video/7674196601761516833) ·
-> [#6 courbatures](https://www.tiktok.com/@expliquemoien40sec/video/7674567610926648608)
+> [#6 courbatures](https://www.tiktok.com/@expliquemoien40sec/video/7674567610926648608) ·
+> [#7 gargouillis](https://www.tiktok.com/@expliquemoien40sec/video/7675078078611098912)
 >
 > Bio, avatar et réglages du compte : `publication/bio-tiktok.md`.
 
@@ -174,6 +176,21 @@ Ton ventre gargouille, et tout le monde croit que tu as faim 🫠
 En fait ça n'a presque rien à voir : c'est une bulle d'air écrasée dans un tube étroit. Le bruit existe aussi après manger, sauf qu'à ce moment-là la nourriture l'étouffe.
 👉 Abonne-toi — demain : pourquoi tes doigts se rident dans l'eau.
 #gargouillis #digestion #corpshumain #lesavaistu #apprendresurtiktok #science
+```
+
+## Vidéo #8 — Pourquoi tes doigts se rident dans l'eau ✅ LIVRÉE
+
+- **Fichier vidéo (720×1280 sous-titré, 40 s)** :
+  https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/df9ba7ef-9667-42f3-892b-c70d1fcf5a29.mp4
+- **Note** : programmée avec le master 720p, l'upscaler Topaz étant engorgé au moment de la livraison.
+  Le média peut être remplacé par le 1080p via l'action `swap_post_media_verified` tant que le post est PENDING.
+- **Légende** :
+
+```
+Non, tes doigts ne gonflent pas en absorbant l'eau 🛁
+C'est ton système nerveux qui serre les vaisseaux sous la peau et creuse des sillons. La preuve : un doigt dont le nerf est abîmé ne se ride plus jamais. Ce sont des rainures antidérapantes, comme sur un pneu.
+👉 Abonne-toi — demain : pourquoi le soleil te fait éternuer.
+#doigtsfripes #corpshumain #systemenerveux #lesavaistu #apprendresurtiktok #science
 ```
 
 ## Règles de chaîne (à reconduire chaque jour)

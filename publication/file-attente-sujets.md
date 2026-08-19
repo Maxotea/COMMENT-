@@ -12,11 +12,11 @@
 - [x] 004 — Pourquoi tu as des frissons → CTA annonce : le nez bouché (publié 14/08 12:00)
 - [x] 005 — Pourquoi ton nez se bouche d'un seul côté → CTA annonce : les courbatures (publié 15/08 12:00)
 - [x] 006 — Pourquoi les courbatures arrivent deux jours après → CTA annonce : les gargouillis (publié 16/08 12:00)
-- [x] 007 — Pourquoi ton ventre gargouille → CTA annonce : les doigts fripés (programmé 17/08 21:00, post 363188030)
+- [x] 007 — Pourquoi ton ventre gargouille → CTA annonce : les doigts fripés (publié 17/08 21:00)
+- [x] 008 — Pourquoi tes doigts se rident dans l'eau → CTA annonce : l'éternuement face au soleil (19/08)
 
 ## À produire (dans cet ordre)
 
-- [ ] 008 — **Pourquoi tes doigts se rident dans l'eau** · angle : ce n'est pas l'eau qui gonfle la peau, c'est ton système nerveux qui crée des rainures antidérapantes → CTA : l'éternuement face au soleil
 - [ ] 009 — **Pourquoi tu éternues en regardant le soleil** · angle : le réflexe photo-sternutatoire, un croisement de câbles entre nerf optique et nerf trijumeau, 1 personne sur 4 → CTA : le mal de tête de la glace
 - [ ] 010 — **Pourquoi la glace te donne mal à la tête** · angle : le palais refroidi contracte puis dilate une artère, et le cerveau se trompe sur l'origine de la douleur → CTA : le rougissement
 - [ ] 011 — **Pourquoi tu rougis** · angle : l'adrénaline dilate les vaisseaux du visage, seule zone où ils obéissent à l'émotion — le seul signal social qu'on ne peut pas simuler → CTA : les crampes

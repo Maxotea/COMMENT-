@@ -1,0 +1,80 @@
+{
+  "topic": "Pourquoi tes doigts se rident dans l'eau",
+  "channel_type": "explainer",
+  "style": "Pastel Flat 2D",
+  "language": "fr",
+  "through_line": {
+    "name": "le sillon sur la pulpe du doigt",
+    "asset": "prop_sillon",
+    "progression": "constate en bloc un (les plis apparaissent sur les doigts sortis de l'eau, sans cause visible) -> explique en bloc deux (le nerf commande, les vaisseaux se raccourcissent et tirent la surface vers le bas, qui se plisse) -> prouve en bloc trois (le doigt au nerf coupe reste lisse, et les sillons evacuent l'eau comme des rainures de pneu) -> utilise en bloc quatre (les sillons permettent de tenir un verre mouille sans glisser)",
+    "resolution": "le bloc final montre les sillons en train de servir : le personnage tient fermement un verre mouille. Le pli du hook n'etait pas un accident subi mais un outil fabrique a la demande par le systeme nerveux"
+  },
+  "arc": { "hook": 1, "build": [2], "turn": 3, "payoff": 4 },
+  "blocks": [
+    {
+      "n": 1,
+      "arc_role": "hook",
+      "vo_line": "Après un long bain, tes doigts se couvrent de petits plis. On croit généralement que la peau absorbe l'eau et gonfle, mais c'est entièrement faux.",
+      "location": "bain",
+      "through_line_state": "constate : les sillons apparaissent sur la pulpe, on les voit sans comprendre d'ou ils viennent",
+      "shots": [
+        "WIDE static: the person kneels on the floor beside the lavender tub, sleeves pushed up, swirling one hand slowly in the blue water",
+        "MEDIUM static: they keep swirling, resting their chin on the other hand, looking bored and patient while foam blobs drift",
+        "CLOSE-UP static: they lift the hand clear of the water and hold it up, droplets falling back into the tub",
+        "EXTREME CLOSE-UP slow push-in: the pads of two fingertips, soft curved grooves creasing across their surface one after another",
+        "MEDIUM static: the groove badge swings in from the right and settles beside the person with a bounce, two sparkles popping"
+      ],
+      "assets_used": ["loc_bain", "char_main", "prop_sillon"]
+    },
+    {
+      "n": 2,
+      "arc_role": "build",
+      "vo_line": "C'est ton système nerveux qui commande. Il serre les vaisseaux sous la peau du doigt, et la surface, tirée par en dessous, se creuse en sillons.",
+      "location": "doigt",
+      "through_line_state": "explique : l'impulsion mint parcourt le nerf, les tubes lavande se raccourcissent et la surface se plisse juste au-dessus",
+      "shots": [
+        "WIDE static: the cutaway at rest, the outer surface perfectly smooth, the three lavender tubes plump and round, the mint nerve thread dark and quiet",
+        "MEDIUM lateral gentle drift right: a bright mint pulse races along the nerve thread from the left and reaches the tubes",
+        "CLOSE-UP high angle static: the three lavender tubes squeeze thinner and shorter, pulling downward on the surface above them",
+        "EXTREME CLOSE-UP slow push-in: the smooth surface buckling downward exactly above one shortened tube, folding into a single soft groove, one baby blue sparkle popping at the fold",
+        "MEDIUM low angle static: pulled back, three grooves now cross the whole surface, each sitting directly above its shortened tube"
+      ],
+      "assets_used": ["loc_doigt", "prop_sillon"]
+    },
+    {
+      "n": 3,
+      "arc_role": "turn",
+      "vo_line": "La preuve : un doigt dont le nerf est abîmé ne se ride plus jamais. Ces sillons agissent comme les rainures d'un pneu sous la pluie.",
+      "location": "doigt",
+      "through_line_state": "prouve : cote a cote, le doigt au nerf intact se plisse et evacue l'eau, celui au nerf coupe reste lisse et la retient",
+      "shots": [
+        "WIDE static: two identical fingertip cutaways side by side; the left has a bright mint nerve thread, the right a pale greyed-out nerve thread with a gap in it",
+        "MEDIUM static: a mint pulse travels down the left nerve and its surface folds into three grooves, while the right one stays perfectly smooth",
+        "CLOSE-UP high angle static: pale blue water pours over the grooved left surface and runs away sideways along the channels, leaving it clear",
+        "CLOSE-UP high angle static: the same water pours over the smooth right surface and just sits there as one flat sheet, sliding about",
+        "EXTREME CLOSE-UP slow push-in: one groove up close, a thin blue stream running neatly along its channel like rainwater in a tyre tread"
+      ],
+      "assets_used": ["loc_doigt", "prop_sillon"]
+    },
+    {
+      "n": 4,
+      "arc_role": "payoff",
+      "vo_line": "Ce sont donc des rainures utiles, pas un accident : elles aident à agripper les objets mouillés. Abonne-toi, demain on regarde pourquoi le soleil fait éternuer.",
+      "location": "bain",
+      "through_line_state": "utilise : les sillons servent enfin — la main tient un verre mouille sans glisser, et le pli du hook devient un outil",
+      "shots": [
+        "MEDIUM static: the person stands beside the tub holding a wet rounded mint drinking glass, gripping it firmly and confidently",
+        "EXTREME CLOSE-UP static on the badge: the three grooves on the pad deepen and a thin blue stream runs neatly out along each channel",
+        "CLOSE-UP static: their grooved fingertips pressed against the wet glass, holding without a single slip",
+        "MEDIUM high angle static: they look at their own hand and break into a pleased grin, giving it a small approving nod",
+        "CLOSE-UP low angle static: the person points at the viewer, a rounded sandy yellow bell shape pops in beside them and rings with two sparkles, and they wink"
+      ],
+      "assets_used": ["loc_bain", "char_main", "prop_sillon"]
+    }
+  ],
+  "sources": [
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3538417/",
+    "https://pubmed.ncbi.nlm.nih.gov/23814048/",
+    "https://royalsocietypublishing.org/doi/10.1098/rsbl.2012.0999"
+  ]
+}

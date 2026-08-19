@@ -1,23 +1,37 @@
 # Routine quotidienne — ExpliqueMoi
 
-**État : créée le 2026-08-13, id `trig_01Mu7zmXeawv4pQeyfkReSM7`, tous les jours à 06:00 heure de Paris (04:00 UTC).**
+**État : `trig_01Lq7k3wegKAPMTyduScXyJj`, tous les jours à 06:00 heure de Paris (04:00 UTC).**
+Recréée le 2026-08-19 (l'ancienne, `trig_01Mu7zmXeawv4pQeyfkReSM7`, a été supprimée).
 
-*Prompt mis à jour le 2026-08-13 après les vidéos 004-006 : règle des deux prises, registre de langue, `privacyOption` TikTok, relecture des posts en erreur. Le prompt stocké dans la routine et celui reproduit ci-dessous sont identiques.*
+> ## ⛔ La routine ne peut PAS fonctionner en l'état — et c'est prouvé
+>
+> Elle a tiré le **18/08 à 06:04** et n'a rien produit. Aucune vidéo, aucun post, aucun commit.
+> La chaîne des CTA a glissé d'un jour et la vidéo 008 a dû être rattrapée à la main.
+>
+> **Cause :** la routine ne stocke aucun connecteur MCP. Sans Higgsfield elle ne peut rien générer,
+> sans Zapier elle ne peut rien planifier. La session se réveille, ne trouve pas ses outils, et s'arrête.
+>
+> **Ce que j'ai essayé et qui ne marche pas :** le paramètre `connectors` de `create_trigger` renvoie
+> `the connectors parameter is not available for this organization`. L'API refuse donc d'attacher les
+> connecteurs, quelle que soit la formulation.
+>
+> **Le seul correctif possible, et il n'appartient qu'à Maxime (2 min) :**
+> ouvrir **claude.ai → Routines → « ExpliqueMoi — vidéo quotidienne »**, attacher les connecteurs
+> **HIGGSFIELD** et **Zapier**, enregistrer. Si l'entrée n'est pas modifiable, la supprimer et la recréer
+> depuis cette interface en collant le prompt ci-dessous.
+>
+> **Comment vérifier que c'est réglé :** une routine correctement configurée porte un bloc
+> `mcp_connections` listant ses connecteurs. Les routines *POST CM-OTEA* et *CR client Publi Hebdo*
+> l'ont (elles ont été créées depuis l'interface, `created_via: http_api`) ; celle-ci ne l'a pas
+> (`created_via: meta_mcp`). C'est exactement la différence entre une routine qui tourne et une qui
+> se réveille pour rien.
+>
+> Tant que ce n'est pas fait, il suffit de demander « lance la vidéo du jour » pour que je la produise.
 
-> ⚠️ **Action requise avant qu'elle serve à quelque chose.** Le planificateur a créé la routine
-> **sans les connecteurs** Higgsfield et Zapier/Metricool. Une session qui démarre sans eux ne peut
-> ni générer la vidéo ni la planifier : elle se réveillerait pour rien.
->
-> **Correctif (2 min)** : ouvrir claude.ai → **Routines** → « ExpliqueMoi — vidéo quotidienne » →
-> attacher les connecteurs **Higgsfield** et **Zapier** (et GitHub si proposé), puis enregistrer.
-> Si la routine n'est pas modifiable, la recréer depuis cette même interface en collant le prompt
-> ci-dessous — c'est le seul chemin qui attache les connecteurs de façon fiable.
->
-> Vérifié le 13/08 : la routine liste bien ses outils de base (Bash, Read, Write, WebFetch…) mais
-> **aucun serveur MCP**. Sans Higgsfield elle ne peut pas générer, sans Zapier elle ne peut pas planifier.
->
-> Tant que ce n'est pas fait, la production quotidienne reste manuelle (il suffit de me demander
-> « lance la vidéo du jour »).
+## Garde-fou ajouté au prompt
+
+Le prompt commence désormais par une étape 0 : la session vérifie que Higgsfield et Zapier répondent
+**avant** de commencer, et s'arrête net en le disant si l'un manque. Elle ne fera plus semblant d'avancer.
 
 ## Pourquoi 06:00
 
