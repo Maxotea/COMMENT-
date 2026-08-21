@@ -17,7 +17,7 @@
 > | Vidéo #6 — courbatures | 2026-08-16 12:00 | TikTok | 361608460 | ✅ PUBLIÉE |
 > | Vidéo #7 — gargouillis | 2026-08-17 21:00 | TikTok | 363188030 | ✅ PUBLIÉE |
 > | Vidéo #8 — doigts fripés | 2026-08-19 12:00 | TikTok | 363865699 | ✅ PUBLIÉE |
-> | Vidéo #9 — éternuement au soleil | 2026-08-21 22:30 | TikTok | 365057205 | PENDING, autoPublish, 1080p |
+> | Vidéo #9 — éternuement au soleil | 2026-08-21 22:30 | TikTok | 365057205 | ✅ PUBLIÉE |
 >
 > Vidéos publiées :
 > [#2 hoquet](https://www.tiktok.com/@expliquemoien40sec/video/7673176927527652640) ·
@@ -26,7 +26,8 @@
 > [#5 nez bouché](https://www.tiktok.com/@expliquemoien40sec/video/7674196601761516833) ·
 > [#6 courbatures](https://www.tiktok.com/@expliquemoien40sec/video/7674567610926648608) ·
 > [#7 gargouillis](https://www.tiktok.com/@expliquemoien40sec/video/7675078078611098912) ·
-> [#8 doigts fripés](https://www.tiktok.com/@expliquemoien40sec/video/7675681166975946006)
+> [#8 doigts fripés](https://www.tiktok.com/@expliquemoien40sec/video/7675681166975946006) ·
+> [#9 éternuement au soleil](https://www.tiktok.com/@expliquemoien40sec/video/7676585179015564576)
 >
 > Bio, avatar et réglages du compte : `publication/bio-tiktok.md`.
 
@@ -199,7 +200,9 @@ C'est ton système nerveux qui serre les vaisseaux sous la peau et creuse des si
 #doigtsfripes #corpshumain #systemenerveux #lesavaistu #apprendresurtiktok #science
 ```
 
-## Vidéo #9 — Pourquoi tu éternues en regardant le soleil ✅ LIVRÉE
+## Vidéo #9 — Pourquoi tu éternues en regardant le soleil ✅ PUBLIÉE
+
+- **En ligne** : https://www.tiktok.com/@expliquemoien40sec/video/7676585179015564576
 
 - **Fichier vidéo (1080×1920, 40 s)** :
   https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260821_194409_cc2a5213-f6b0-4574-b45f-496015b17103.mp4

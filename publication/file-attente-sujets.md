@@ -14,7 +14,7 @@
 - [x] 006 — Pourquoi les courbatures arrivent deux jours après → CTA annonce : les gargouillis (publié 16/08 12:00)
 - [x] 007 — Pourquoi ton ventre gargouille → CTA annonce : les doigts fripés (publié 17/08 21:00)
 - [x] 008 — Pourquoi tes doigts se rident dans l'eau → CTA annonce : l'éternuement face au soleil (publié 19/08 12:00)
-- [x] 009 — Pourquoi tu éternues en regardant le soleil → CTA annonce : le mal de tête de la glace (programmé 21/08 22:30)
+- [x] 009 — Pourquoi tu éternues en regardant le soleil → CTA annonce : le mal de tête de la glace (publié 21/08 22:30)
 
 ## À produire (dans cet ordre)
 

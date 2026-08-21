@@ -15,7 +15,8 @@
 | Master 720p sous-titré (backup) | https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/aadeb266-bce4-418b-b666-22e82bbf48f9.mp4 |
 | Poster | https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/abf33d0a-9b02-46b5-a074-d2721b5b1b78.jpg |
 
-**Publication** : TikTok @expliquemoien40sec, vendredi 21/08 à 22:30 (post Metricool 365057205, 1080p, `privacyOption` relu et présent, aucun doublon).
+**Publication** : ✅ en ligne — https://www.tiktok.com/@expliquemoien40sec/video/7676585179015564576
+TikTok @expliquemoien40sec, vendredi 21/08 à 22:30, publiée automatiquement (post Metricool 365057205, 1080p, `privacyOption` relu et présent, aucun doublon).
 
 ## Script final (tel que dit à l'antenne)
 
