@@ -1,0 +1,87 @@
+{
+  "video": "009 — Pourquoi tu éternues en regardant le soleil",
+  "date": "2026-08-21",
+  "workflow": "faceless-channel-video (bundle renommé — voir incident_bundle_deplace)",
+  "contexte": "Épisode lancé à la demande de Maxime le 21/08 au soir. Les créneaux du 20/08 et du 21/08 midi sont passés à vide : la routine quotidienne tire bien mais n'a toujours aucun connecteur MCP.",
+  "intake_lock": "Type: Explainer [DNA] · Mode: animé [DNA] · Style: Pastel Flat 2D [DNA, clé réutilisée] · 40s → 4 blocs · 9:16 [DNA] · Sous-titres: clean FR [DNA] · Voix: Ainsley [DNA] · Sujet: le réflexe photo-sternutatoire [CTA de la vidéo 8]",
+  "style_key_job_id": "6f332671-7f68-40bd-abd1-e7bf6cba2656",
+  "assets": {
+    "char_main": {"job_id": "9decbeed-3925-4730-99bd-bfbd2add6a5b", "note": "réutilisé depuis la vidéo 001"},
+    "loc_cinema": {"job_id": "cb83ed31-7248-4a4d-a388-50bb62941577", "note": "nouveau — sortie de cinéma, trottoir sable en plein soleil"},
+    "loc_nerfs": {"job_id": "dcc8de1a-a616-4b67-88b2-077c7866559e", "note": "nouveau — coupe de profil, câble mint (optique) et câble bleu (nez)"},
+    "prop_carrefour": {"job_id": "270094f9-1071-43fd-bd49-d3d430c9084b", "note": "nouveau — badge fil rouge : les deux câbles qui se frôlent"},
+    "loc_carrefour": {"job_id": "f2798e26-ba0f-4366-9df3-63feb91e641e", "note": "généré pour donner au bloc 3 un plateau distinct du bloc 2 — NON UTILISÉ, crédits épuisés avant de pouvoir régénérer le bloc"}
+  },
+  "blocks_jobs": {
+    "1": "e6a8f2c6-5766-4270-ab1c-a811a37b9f36",
+    "2": "2e8caf62-9965-4f5c-a54e-33cc7e8bf057",
+    "3": "d34601a9-1fec-4016-a11f-7f96b4043c9e",
+    "4": "27c1587b-bdc6-49f4-be7b-3715079a6ba9"
+  },
+  "blocks_jobs_abandonnes": {
+    "1": "fd905dee-20d4-45dc-ae08-01e20a6f685c (shots 4 et 5 tous deux MEDIUM)",
+    "3a": "34099083-59fc-4a10-9840-cd31da699ea8 (ouvrait sur WIDE en retour de lieu)",
+    "3b": "a8fe1591-a68c-4d0e-a3b3-2ebdaef3e327 (même jeu de cadres que le bloc 2)",
+    "4": "3c48f2d4-87d5-41d9-88eb-0313544276a2 (shots 3 et 4 tous deux MEDIUM)"
+  },
+  "voice_jobs": {
+    "1": {"job_id": "4b80c631-dbac-4bf3-bb51-eb48f183c2ad", "speech_s": 9.18, "words": 27, "wps": 2.94, "attempt": "8 prises, 2 formulations — voir incident_hook_8_mots"},
+    "2": {"job_id": "eb61abbd-349a-42dd-ba64-fa0e8cf2ecf6", "speech_s": 8.8, "words": 25, "wps": 2.84, "attempt": "paire 1, prise A"},
+    "3": {"job_id": "76403ebd-8572-434c-bcb0-1ef95b086a72", "speech_s": 9.5, "words": 24, "wps": 2.53, "attempt": "paire 2, prise B ; la paire 1 a été jetée avec la ligne (répétition de « ton » refusée par le validateur)"},
+    "4": {"job_id": "e2d02527-3f68-4258-8ba5-01e065cb4c74", "speech_s": 9.18, "words": 25, "wps": 2.72, "attempt": "paire 2, prise A ; la paire 1 (24 mots familiers) donnait 7.59 et 7.46 s, RUSHED des deux côtés"}
+  },
+  "music_bed_job": {"job_id": "9e0fb951-6588-4e3d-9db9-5218e282c22d", "model": "sonilo_music"},
+  "incident_bundle_deplace": {
+    "symptome": "speech_metrics.sh et finish_video.sh introuvables sous $HF_WORKFLOWS/faceless-channel-video/scripts/, comme depuis la vidéo 004.",
+    "cause": "le bundle a été redécoupé côté Higgsfield. Les scripts vivent maintenant dans des bundles séparés.",
+    "chemins_actuels": {
+      "speech_metrics.sh": "$HF_WORKFLOWS/narrator/scripts/speech_metrics.sh",
+      "finish_video.sh": "$HF_WORKFLOWS/faceless-video/scripts/finish_video.sh",
+      "validate_motion_script.py": "$HF_WORKFLOWS/faceless-video/scripts/validate_motion_script.py"
+    },
+    "regle_ajoutee": "channel_dna.json → regle_chemins_bundle"
+  },
+  "incident_validateur_durci": {
+    "symptome": "validate_motion_script.py, qui passait sur les vidéos 004 à 008, a refusé le manifeste sur six points d'un coup.",
+    "regles_nouvelles": [
+      "champ genre obligatoire (education | history | kids | storytelling)",
+      "deux plans voisins ne peuvent pas partager la même taille de cadre",
+      "un bloc qui REVIENT sur un lieu déjà vu ne peut pas rouvrir sur un WIDE",
+      "le hook doit ouvrir sur une phrase d'au plus 8 mots, le fait brut posé à plat",
+      "deux blocs à moins de 2 blocs d'écart ne peuvent pas partager lieu + assets (hors asset du fil rouge)"
+    ],
+    "cout": "3 blocs vidéo et 6 prises de voix régénérés",
+    "regle_ajoutee": "channel_dna.json → regle_validateur_prealable"
+  },
+  "incident_hook_8_mots": {
+    "symptome": "la règle des 8 mots force une phrase courte suivie d'un point, ce qui invite la voix à respirer au point.",
+    "mesures": "formulation 1 (26 mots, une longue phrase d'ouverture) : 7.95 et 8.17 s, RUSHED. Registre relevé (25 mots) : 11.29 et 9.53 s. Après réécriture en 8 mots + reste (27 mots) : 9.96 s AVEC une pause interne de 0.89 s, puis 8.27 s RUSHED. Deux prises de plus : 6.80 s, 10.50 s, 9.18 s.",
+    "conclusion": "sur une ligne à deux phrases, la pause au point est un tirage comme la durée. La prise retenue tombe à 9.18 s avec zéro pause interne. Ne pas réécrire la ligne pour tuer la pause : retirer.",
+    "regle_ajoutee": "channel_dna.json → regle_debit_voix_fr.structure (complétée)"
+  },
+  "incident_noms_de_voix": {
+    "symptome": "finish_video.sh assemble le master puis échoue à l'étape sous-titres : « voice file missing for block 1: tried work/voices/v_000.wav ».",
+    "cause": "l'étape assemblage écrit work/voices/voice01.wav … voice04.wav, l'étape caption relit work/voices/v_000.wav … v_003.wav. Incohérence interne au bundle.",
+    "correctif": "cp voice01.wav v_000.wav (etc.) puis relancer finish_video.sh — le script est idempotent, il saute l'assemblage et reprend aux sous-titres.",
+    "regle_ajoutee": "channel_dna.json → regle_noms_voix_finish_video"
+  },
+  "incident_credits": {
+    "symptome": "generate_video_batch refusé : « Out of credits on pro (annual) plan in Private workspace ». Solde 28.02 crédits.",
+    "consequence": "le bloc 3 n'a pas pu être régénéré sur le plateau loc_carrefour dédié. Le validateur reste donc rouge sur un point : blocs 2 et 3 partagent lieu + assets. Les deux clips livrés sont visuellement distincts (le bloc 2 est large et froid, le bloc 3 est serré et lumineux), mais la règle n'est pas satisfaite au sens strict.",
+    "a_faire": "recharger des crédits Higgsfield avant la vidéo 010"
+  },
+  "validators": {
+    "validate_motion_script": {"valid": false, "reste": "blocs 2 et 3 partagent lieu + assets — non corrigeable sans crédits"},
+    "gate4": "4 blocs 10.006s, 720×1280, 24fps",
+    "gate7": "23 cues, similarité par bloc 0.87 / 0.80 / 0.90 / 0.90",
+    "gate8": "master 720×1280, audio 40.055s, video 40.042s, puis Topaz 1080p"
+  },
+  "delivery": {
+    "master_720_media_id": "aadeb266-bce4-418b-b666-22e82bbf48f9",
+    "master_720_url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/aadeb266-bce4-418b-b666-22e82bbf48f9.mp4",
+    "upscale_job_id": "cc2a5213-f6b0-4574-b45f-496015b17103",
+    "upscaled": "topaz-1080p",
+    "poster_media_id": "abf33d0a-9b02-46b5-a074-d2721b5b1b78",
+    "poster_url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/abf33d0a-9b02-46b5-a074-d2721b5b1b78.jpg"
+  }
+}

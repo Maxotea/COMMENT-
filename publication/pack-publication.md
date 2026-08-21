@@ -1,5 +1,7 @@
 # Pack de publication — chaîne ExpliqueMoi (TikTok · Reels · Shorts)
 
+> **État au 2026-08-21.** Les créneaux du 20/08 et du 21/08 midi sont passés à vide : la routine quotidienne se déclenche mais ne produit rien, faute de connecteurs MCP (voir `publication/routine-quotidienne.md`).
+>
 > **État au 2026-08-17.** Le correctif `privacyOption` est validé sur le terrain : les vidéos #4, #5 et #6 sont toutes sorties automatiquement, sans intervention manuelle.
 >
 > **État initial au 2026-08-13.** Compte TikTok **@expliquemoien40sec**, marque Metricool « ExpliqueMoi »
@@ -14,7 +16,8 @@
 > | Vidéo #5 — nez bouché | 2026-08-15 12:00 | TikTok | 361610981 | ✅ PUBLIÉE |
 > | Vidéo #6 — courbatures | 2026-08-16 12:00 | TikTok | 361608460 | ✅ PUBLIÉE |
 > | Vidéo #7 — gargouillis | 2026-08-17 21:00 | TikTok | 363188030 | ✅ PUBLIÉE |
-> | Vidéo #8 — doigts fripés | 2026-08-19 12:00 | TikTok | 363865699 | PENDING, autoPublish, 1080p |
+> | Vidéo #8 — doigts fripés | 2026-08-19 12:00 | TikTok | 363865699 | ✅ PUBLIÉE |
+> | Vidéo #9 — éternuement au soleil | 2026-08-21 22:30 | TikTok | 365057205 | PENDING, autoPublish, 1080p |
 >
 > Vidéos publiées :
 > [#2 hoquet](https://www.tiktok.com/@expliquemoien40sec/video/7673176927527652640) ·
@@ -22,7 +25,8 @@
 > [#4 frissons](https://www.tiktok.com/@expliquemoien40sec/video/7673825642026175777) ·
 > [#5 nez bouché](https://www.tiktok.com/@expliquemoien40sec/video/7674196601761516833) ·
 > [#6 courbatures](https://www.tiktok.com/@expliquemoien40sec/video/7674567610926648608) ·
-> [#7 gargouillis](https://www.tiktok.com/@expliquemoien40sec/video/7675078078611098912)
+> [#7 gargouillis](https://www.tiktok.com/@expliquemoien40sec/video/7675078078611098912) ·
+> [#8 doigts fripés](https://www.tiktok.com/@expliquemoien40sec/video/7675681166975946006)
 >
 > Bio, avatar et réglages du compte : `publication/bio-tiktok.md`.
 
@@ -193,6 +197,22 @@ Non, tes doigts ne gonflent pas en absorbant l'eau 🛁
 C'est ton système nerveux qui serre les vaisseaux sous la peau et creuse des sillons. La preuve : un doigt dont le nerf est abîmé ne se ride plus jamais. Ce sont des rainures antidérapantes, comme sur un pneu.
 👉 Abonne-toi — demain : pourquoi le soleil te fait éternuer.
 #doigtsfripes #corpshumain #systemenerveux #lesavaistu #apprendresurtiktok #science
+```
+
+## Vidéo #9 — Pourquoi tu éternues en regardant le soleil ✅ LIVRÉE
+
+- **Fichier vidéo (1080×1920, 40 s)** :
+  https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260821_194409_cc2a5213-f6b0-4574-b45f-496015b17103.mp4
+- **Note** : calée à 22:30 et non à midi — les créneaux du 20/08 et du 21/08 midi étaient déjà passés
+  quand l'épisode a été lancé. ⚠️ Crédits Higgsfield épuisés en fin de production (28 crédits restants
+  au moment du blocage) : à recharger avant la vidéo 010.
+- **Légende** :
+
+```
+Une personne sur quatre éternue en sortant en plein soleil ☀️
+Le nerf qui gère ton nez frôle le nerf optique sur un court trajet. Une lumière brutale sature le nerf optique et le signal déborde sur son voisin : ton cerveau croit que ton nez est irrité. L'éternuement part donc de tes yeux, pas de ton nez.
+👉 Abonne-toi — demain : pourquoi la glace donne mal à la tête.
+#eternuement #corpshumain #reflexephotique #lesavaistu #apprendresurtiktok #science
 ```
 
 ## Règles de chaîne (à reconduire chaque jour)

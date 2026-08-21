@@ -39,7 +39,8 @@
       "principe": "Avant de regler le registre, regler la STRUCTURE. Une phrase a incise ou apposition (« L'explication habituelle, celle de la peau qui absorbe l'eau, est fausse ») invite le modele a respirer au milieu : pause interne de 0,9 s, au-dessus du seuil de 0,8 s. Deux propositions simples se lisent sans respiration parasite.",
       "methode": "1) ecrire la ligne en deux propositions simples, sans incise ; 2) mesurer ; 3) regler la duree en echangeant deux mots courants contre deux mots polysyllabiques (ou l'inverse). Le registre est un reglage fin sur une structure deja saine, pas un substitut a une phrase mal batie.",
       "constate_le": "2026-08-19, video 008 : 13 prises et 5 formulations sur la ligne 1. La version a apposition tombait a 8,88 s mais avec une pause de 0,92 s ; la meme idee en deux propositions simples plus deux mots polysyllabiques a donne 8,78 s sans aucune pause."
-    }
+    },
+    "structure_complement_2026_08_21": "la regle des 8 mots du validateur force un point tot dans la ligne, et ce point invite a respirer. La pause qui en resulte est un TIRAGE, pas une propriete du texte : sur cinq prises du meme texte elle est passee de 0.89 s a zero, la duree variant de 6.80 a 10.50 s. Ne pas reecrire la ligne pour tuer la pause — retirer."
   },
   "regle_detection_coupes": {
     "probleme": "La vérification du nombre de plans par bloc doit lire le champ ffprobe `pts_time`. Les ffmpeg récents ont supprimé `pkt_pts_time` : la commande ne renvoie alors AUCUNE erreur, juste une liste vide.",
@@ -117,5 +118,38 @@
     "regle": "Apres tout swap de media, relire IMPERATIVEMENT list_scheduled_posts sur la journee visee et compter les posts. S'il y en a deux, verifier lequel porte la bonne version (telecharger et mesurer a l'ffprobe, ne pas se fier a l'URL) puis supprimer l'autre avec delete_post. Ne jamais se fier au champ outcome de l'action.",
     "alternative_plus_sure": "si l'upscale n'est pas pret a l'heure de la planification, mieux vaut attendre et planifier une seule fois avec la version finale que de planifier en 720p puis tenter un swap.",
     "constate_le": "2026-08-19, video 008."
+  },
+  "regle_chemins_bundle": {
+    "constat": "le bundle Higgsfield a ete redecoupe : $HF_WORKFLOWS/faceless-channel-video/scripts/ n'existe plus.",
+    "chemins": {
+      "speech_metrics.sh": "$HF_WORKFLOWS/narrator/scripts/speech_metrics.sh",
+      "finish_video.sh": "$HF_WORKFLOWS/faceless-video/scripts/finish_video.sh",
+      "validate_motion_script.py": "$HF_WORKFLOWS/faceless-video/scripts/validate_motion_script.py",
+      "audio_to_captions.py": "$HF_WORKFLOWS/subtitles/scripts/audio_to_captions.py"
+    },
+    "reflexe": "ne pas coder le chemin en dur : faire un find $HF_WORKFLOWS -name '<script>' au premier appel de chaque session. Le bundle peut bouger a nouveau.",
+    "vue_le": "2026-08-21 (video 009)"
+  },
+  "regle_validateur_prealable": {
+    "constat": "validate_motion_script.py se durcit avec le temps. Il passait sur les videos 004 a 008 ; le 21/08 il a refuse le manifeste de la 009 sur six points.",
+    "regle": "lancer le validateur AVANT de generer le moindre bloc video ou la moindre prise de voix. Un refus apres generation coute des blocs et des prises a refaire — sur la 009 : 3 blocs et 6 prises.",
+    "commande": "python3 $HF_WORKFLOWS/faceless-video/scripts/validate_motion_script.py --script script_manifest.json --duration-seconds 40 --words-min 20 --words-max 30",
+    "regles_connues": [
+      "champ genre obligatoire au niveau racine : education | history | kids | storytelling",
+      "deux plans VOISINS ne peuvent pas partager la meme taille de cadre (WIDE / MEDIUM / CLOSE-UP / EXTREME CLOSE-UP)",
+      "un bloc qui REVIENT sur un lieu deja vu ne peut pas rouvrir sur un WIDE — seul le premier bloc d'un lieu l'etablit",
+      "le hook ouvre sur une phrase d'au plus 8 mots, le fait brut pose a plat, et seulement ensuite le reste du budget",
+      "deux blocs a 2 blocs d'ecart ou moins ne peuvent pas partager lieu + assets",
+      "pas de repetition d'un meme mot dans une fenetre de 6 mots d'une vo_line",
+      "pas de phrase verbatim de N mots partagee entre deux plans"
+    ],
+    "piege": "pour la regle lieu+assets, l'asset du fil rouge est EXCLU de la comparaison. Reordonner assets_used ne sert donc a rien : il faut un vrai plateau (image) different pour le bloc qui revient.",
+    "vue_le": "2026-08-21 (video 009)"
+  },
+  "regle_noms_voix_finish_video": {
+    "symptome": "finish_video.sh assemble le master puis echoue : 'per-block timing failed: voice file missing for block 1: tried work/voices/v_000.wav'.",
+    "cause": "incoherence interne au bundle — l'etape assemblage ecrit work/voices/voice01.wav … voice04.wav, l'etape caption relit work/voices/v_000.wav … v_003.wav.",
+    "correctif": "cp work/voices/voice01.wav work/voices/v_000.wav (et ainsi de suite, indices decales de 1), puis relancer finish_video.sh avec exactement les memes arguments : il est idempotent, il saute l'assemblage et reprend aux sous-titres.",
+    "vue_le": "2026-08-21 (video 009)"
   }
 }

@@ -1,0 +1,103 @@
+{
+  "topic": "Pourquoi tu éternues en regardant le soleil",
+  "channel_type": "explainer",
+  "genre": "education",
+  "style": "Pastel Flat 2D",
+  "language": "fr",
+  "through_line": {
+    "name": "le carrefour des deux nerfs",
+    "asset": "prop_carrefour",
+    "progression": "ignore en bloc un (le personnage eternue en plein soleil et cherche la cause du mauvais cote, le badge n'arrive qu'au dernier plan) -> localise en bloc deux (les deux cables se frolent sur un court trajet, un cheveu de lavande les separe) -> franchi en bloc trois (la lumiere sature le cable mint et le surplus saute sur le cable bleu voisin) -> compris en bloc quatre (le badge rejoue le saut au moment ou le personnage montre ses yeux au lieu de son nez)",
+    "resolution": "le bloc final rejoue le saut du signal dans le badge a l'instant ou le personnage cesse de toucher son nez et pointe ses yeux : l'eternuement du hook ne partait pas du nez mais du carrefour ou les deux nerfs se frolent"
+  },
+  "arc": {
+    "hook": 1,
+    "build": [
+      2
+    ],
+    "turn": 3,
+    "payoff": 4
+  },
+  "blocks": [
+    {
+      "n": 1,
+      "arc_role": "hook",
+      "vo_line": "Une personne sur quatre éternue face au soleil. Tu sors du cinéma en plein jour et ça part tout seul, sans que la lumière touche ton nez.",
+      "location": "cinema",
+      "through_line_state": "ignore : on voit l'eternuement et le personnage accuse son nez, le badge du carrefour n'apparait qu'au dernier plan",
+      "shots": [
+        "WIDE static: the person steps out of the dim cinema doorway onto the bright sandy pavement, one hand still on the door",
+        "MEDIUM static: a wide flat sandy yellow sunburst floods the frame from the top right and the person screws both eyes shut, hands lifting",
+        "CLOSE-UP static: framed on head and shoulders, their nose wrinkles, their mouth opens and they sneeze hard, head snapping forward",
+        "MEDIUM low angle static: they straighten up, blink at the sky and touch the tip of their own nose with one finger, puzzled",
+        "WIDE static: the crossing badge swings in from the right and settles beside the person with a bounce, two sparkles popping"
+      ],
+      "assets_used": [
+        "loc_cinema",
+        "char_main",
+        "prop_carrefour"
+      ]
+    },
+    {
+      "n": 2,
+      "arc_role": "build",
+      "vo_line": "Le nerf qui gère ton nez passe juste à côté du nerf optique. Sur ce court trajet, les deux fibres se frôlent de très près.",
+      "location": "nerfs",
+      "through_line_state": "localise : les deux cables sont traces, ils courent en parallele puis se frolent sur un court trajet marque d'un anneau mint",
+      "shots": [
+        "WIDE static: a flat side view of a head-shaped outline, one mint green cable running back from the eye and one baby blue cable running back from the nose",
+        "MEDIUM lateral gentle drift right: the two cables travel backwards through the pale lavender space, parallel and evenly spaced",
+        "CLOSE-UP high angle static: the mint cable and the baby blue cable bend towards each other and run almost touching along one short stretch",
+        "EXTREME CLOSE-UP slow push-in: the narrowest point of that gap, a thin sliver of lavender still separating the two cables",
+        "MEDIUM low angle static: pulled back on the whole pair, a soft mint ring marks the short stretch where they nearly touch"
+      ],
+      "assets_used": [
+        "loc_nerfs",
+        "prop_carrefour"
+      ]
+    },
+    {
+      "n": 3,
+      "arc_role": "turn",
+      "vo_line": "Une lumière brutale sature le nerf optique, et le signal déborde sur son voisin. Le cerveau croit alors que ton nez est vraiment irrité.",
+      "location": "nerfs",
+      "through_line_state": "franchi : la lumiere sature le cable mint, la lueur deborde de son contour et une meche saute le vide pour allumer le cable bleu",
+      "shots": [
+        "CLOSE-UP static: a sandy yellow flash bursts at the eye end of the mint cable and a bright pulse leaps into it",
+        "MEDIUM lateral gentle drift right: the pulse races along the mint cable, the cable swelling as it passes",
+        "EXTREME CLOSE-UP slow push-in: at the narrow stretch the mint cable brightens past its own outline, the glow bulging outward against the thin lavender gap",
+        "CLOSE-UP high angle static: a small wisp of the mint glow jumps across the gap and lands on the baby blue cable, which lights up in turn",
+        "MEDIUM low angle static: the blue pulse reaches the nose end and three baby blue tickle sparks pop around it"
+      ],
+      "assets_used": [
+        "prop_carrefour",
+        "loc_nerfs"
+      ]
+    },
+    {
+      "n": 4,
+      "arc_role": "payoff",
+      "vo_line": "Tu éternues donc à cause de tes yeux, absolument pas de ton nez. Abonne-toi, demain on explique pourquoi la glace provoque un mal de tête.",
+      "location": "cinema",
+      "through_line_state": "compris : le badge rejoue le saut du signal a l'instant ou le personnage lache son nez et pointe ses yeux, puis chausse des lunettes de soleil",
+      "shots": [
+        "CLOSE-UP static: the person back on the sunny pavement, one finger still on the tip of their nose, eyebrows lifting as they think",
+        "EXTREME CLOSE-UP static on the badge: inside the badge the mint glow jumps the gap onto the blue cable again, one baby blue sparkle popping",
+        "MEDIUM high angle static: their face clears, they drop the finger from their nose and point at their own eyes instead with two fingers",
+        "WIDE static: they slip on a pair of flat sandy yellow sunglasses and give a small satisfied nod to the camera",
+        "CLOSE-UP low angle static: the person points at the viewer, a rounded sandy yellow bell shape pops in beside them and rings with two sparkles, and they wink"
+      ],
+      "assets_used": [
+        "char_main",
+        "loc_cinema",
+        "prop_carrefour"
+      ]
+    }
+  ],
+  "sources": [
+    "https://www.ncbi.nlm.nih.gov/books/NBK109193/",
+    "https://pubmed.ncbi.nlm.nih.gov/28520355/",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6428856/",
+    "https://omim.org/entry/100820"
+  ]
+}
